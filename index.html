@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Shivkumar Iyer — Oracle ERP × AI Architect</title>
-<meta name="description" content="Shivkumar Iyer (Shiv / KumR) — Oracle ACE and IBM Application Architect. 24 years in Oracle ERP, now building the AI layer on top: agents, RAG, forecasting, and the systems that put them in production." />
+<title>Shivkumar Iyer · Oracle ERP × AI Architect</title>
+<meta name="description" content="Shivkumar Iyer (Shiv / KumR). Oracle ACE and Application Architect. 24 years in Oracle ERP, now building the AI layer on top: agents, RAG, forecasting, and the systems that put them in production." />
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,16 +14,16 @@
 <style>
   /* ---------- Tokens ---------- */
   :root{
-    --ink:#060B15;
-    --ink-2:#0C1424;
-    --ink-3:#121C30;
-    --line:#20314B;
-    --paper:#E8EEF8;
-    --paper-dim:#8194B2;
-    --paper-faint:#4D6082;
-    --gold:#5C9DFF;        /* accent: azure */
-    --gold-soft:#85B4FF;
-    --slate:#6C88AE;
+    --ink:#05100E;
+    --ink-2:#0A1A17;
+    --ink-3:#102420;
+    --line:#1C342E;
+    --paper:#E6F2EE;
+    --paper-dim:#82A89F;
+    --paper-faint:#4B6A62;
+    --gold:#2DD4BF;        /* accent: teal */
+    --gold-soft:#5EEAD4;
+    --slate:#6C9A92;
     --maxw:1180px;
     --display:"Fraunces",Georgia,serif;
     --mono:"JetBrains Mono",ui-monospace,monospace;
@@ -102,17 +102,24 @@
   .nav-links{display:flex;gap:34px;align-items:center;}
   .nav-links a{
     font-family:var(--mono);font-size:13px;letter-spacing:.04em;
-    color:var(--paper-dim);transition:color .2s;
+    color:var(--paper-dim);transition:color .2s;position:relative;
   }
+  .nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--gold);transition:width .28s cubic-bezier(.2,.7,.2,1);}
+  .nav-links a:not(.btn):hover::after{width:100%;}
   .nav-links a:hover{color:var(--paper);}
   .btn{
     font-family:var(--mono);font-size:13px;letter-spacing:.03em;
     padding:11px 20px;border-radius:2px;
     transition:transform .18s ease, background .2s, color .2s, border-color .2s;
     display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--gold);
+    position:relative;overflow:hidden;
   }
+  .btn::before{content:"";position:absolute;top:0;left:-130%;width:60%;height:100%;
+    background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);
+    transform:skewX(-18deg);transition:left .55s ease;}
+  .btn:hover::before{left:140%;}
   .btn-primary{background:var(--gold);color:var(--ink);font-weight:600;}
-  .btn-primary:hover{transform:translateY(-2px);background:#7FB0FF;}
+  .btn-primary:hover{transform:translateY(-2px);background:#5EEAD4;}
   .btn-ghost{background:transparent;color:var(--paper);border-color:var(--line);}
   .btn-ghost:hover{border-color:var(--paper-dim);transform:translateY(-2px);}
   .nav-toggle{display:none;background:none;border:none;color:var(--paper);font-size:24px;cursor:pointer;}
@@ -136,6 +143,14 @@
     margin:26px 0 24px;
   }
   .hero h1 em{font-style:italic;color:var(--gold);font-weight:500;}
+  .hero h1 em{position:relative;display:inline-block;animation:aiPulse 4.2s ease-in-out infinite;}
+  @keyframes aiPulse{0%,100%{text-shadow:0 0 0 rgba(45,212,191,0);}50%{text-shadow:0 0 26px rgba(45,212,191,.55);}}
+  header::after{content:"";position:absolute;z-index:0;width:60vw;height:60vw;max-width:760px;max-height:760px;
+    right:-12%;top:-22%;border-radius:50%;pointer-events:none;
+    background:radial-gradient(circle at center,rgba(45,212,191,.16),rgba(45,212,191,.05) 42%,transparent 68%);
+    filter:blur(10px);animation:auroraDrift 16s ease-in-out infinite alternate;}
+  @keyframes auroraDrift{0%{transform:translate(0,0) scale(1);}50%{transform:translate(-4%,5%) scale(1.08);}100%{transform:translate(3%,-3%) scale(.96);}}
+  .stat .n .count{font-variant-numeric:tabular-nums;}
   .hero p.lede{font-size:1.12rem;color:var(--paper-dim);max-width:46ch;margin-bottom:34px;}
   .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px;}
   .namecard{
@@ -148,7 +163,7 @@
   .portrait{
     position:relative;aspect-ratio:4/5;border:1px solid var(--line);
     background:
-      radial-gradient(120% 90% at 70% 10%,rgba(92,157,255,.13),transparent 60%),
+      radial-gradient(120% 90% at 70% 10%,rgba(45,212,191,.13),transparent 60%),
       var(--ink-2);
     border-radius:3px;display:flex;align-items:flex-end;padding:22px;overflow:hidden;
   }
@@ -190,6 +205,7 @@
   .track.erp .tag{color:var(--slate);}
   .track h3{font-family:var(--display);font-size:1.7rem;font-weight:600;margin:14px 0 12px;letter-spacing:-.01em;}
   .track p{color:var(--paper-dim);font-size:1rem;margin-bottom:20px;}
+  .btn-primary{will-change:transform;}
   .track .arrow{font-family:var(--mono);font-size:13px;color:var(--paper);display:inline-flex;gap:8px;align-items:center;}
   .track.ai .arrow{color:var(--gold);}
 
@@ -246,7 +262,8 @@
   .foot-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-family:var(--mono);font-size:12px;color:var(--paper-faint);letter-spacing:.04em;}
 
   /* reveal */
-  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal{opacity:0;transform:translateY(26px);filter:blur(6px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1),filter .8s ease;}
+  .reveal.in{filter:blur(0);}
   .reveal.in{opacity:1;transform:none;}
   .hero .reveal{transition-delay:var(--d,0s);}
 
@@ -273,6 +290,29 @@
     .wrap,.nav-inner,.foot-inner{padding-left:22px;padding-right:22px;}
     body{font-size:16px;}
   }
+
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation:none !important;}
+    .reveal{filter:none;transition:opacity .4s ease,transform .4s ease;}
+    header::after{animation:none;}
+    header::before{display:none;}
+    .hero h1 em{animation:none;}
+    .proj::before,.track::before,.channel::before{display:none;}
+  }
+
+  /* ===== interactive: hero cursor spotlight ===== */
+  header::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:radial-gradient(420px circle at var(--hx,72%) var(--hy,28%),rgba(45,212,191,.12),transparent 68%);
+    transition:background .12s ease-out;}
+  /* ===== interactive: pointer-tracking spotlight cards ===== */
+  .track,.channel{position:relative;overflow:hidden;}
+  .proj > *,.track > *,.channel > *{position:relative;z-index:1;}
+  .proj::before,.track::before,.channel::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:radial-gradient(220px circle at var(--mx,50%) var(--my,50%),rgba(45,212,191,.16),transparent 64%);
+    opacity:0;transition:opacity .35s ease;}
+  .proj:hover::before,.track:hover::before,.channel:hover::before{opacity:1;}
+  /* ===== interactive: gentle card tilt ===== */
+  .proj,.track,.channel,.cert{transition:transform .22s cubic-bezier(.2,.7,.2,1),border-color .25s;transform-style:preserve-3d;will-change:transform;}
 </style>
 </head>
 <body>
@@ -280,7 +320,7 @@
 <!-- =================== NAV =================== -->
 <nav id="nav">
   <div class="nav-inner">
-    <a href="#top" class="brand">Shiv<b>.</b>Iyer</a>
+    <a href="#top" class="brand">Shivkumar Iyer<b>.</b></a>
     <div class="nav-links" id="navlinks">
       <a href="#work">AI Work</a>
       <a href="#erp">Oracle ERP</a>
@@ -299,18 +339,18 @@
   <div class="wrap">
     <div class="hero">
       <div class="hero-left">
-        <span class="eyebrow reveal" style="--d:0s">Oracle ACE · IBM Application Architect · Houston, TX</span>
+        <span class="eyebrow reveal" style="--d:0s">Oracle ACE · AI Consultant · Application Architect · Houston, TX</span>
         <h1 class="reveal" style="--d:.08s">24 years in Oracle ERP.<br>Now I ship the <em>AI</em> on top of it.</h1>
-        <p class="lede reveal" style="--d:.16s">I'm Shivkumar Iyer — an enterprise Oracle architect who builds the AI layer real businesses run on: agents, RAG, forecasting, and the systems that put them in production.</p>
+        <p class="lede reveal" style="--d:.16s">I'm Shivkumar Iyer, an enterprise Oracle architect who builds the AI layer real businesses run on: agents, RAG, forecasting, and the systems that put them in production.</p>
         <div class="hero-ctas reveal" style="--d:.24s">
           <a class="btn btn-primary" href="mailto:shiv.arun.iyer@gmail.com?subject=Discovery%20call%20%E2%80%94%20AI%20solutions">Book a discovery call →</a>
           <a class="btn btn-ghost" href="#erp">Hire me for Oracle ERP</a>
         </div>
-        <div class="namecard reveal" style="--d:.32s"><b>Shivkumar Iyer</b> — also Shiv / KumR · Application Architect, AI Consultant, Oracle ACE</div>
+        <div class="namecard reveal" style="--d:.32s"><b>Shivkumar Iyer</b> · also Shiv / KumR · Application Architect, AI Consultant, Oracle ACE</div>
       </div>
       <div class="hero-right reveal" style="--d:.2s">
         <div class="portrait">
-          <img class="portrait-img" src="shiv.jpg" alt="Shivkumar Iyer — Oracle ERP and AI Architect" />
+          <img class="portrait-img" src="shiv.jpg" alt="Shivkumar Iyer, Oracle ERP and AI Architect" />
           <span class="corner c1"></span><span class="corner c2"></span>
           <span class="corner c3"></span><span class="corner c4"></span>
         </div>
@@ -318,10 +358,10 @@
     </div>
 
     <div class="stats">
-      <div class="stat reveal"><div class="n"><span class="gold">24</span></div><div class="l">Years consulting</div></div>
+      <div class="stat reveal"><div class="n"><span class="gold count" data-to="24">0</span></div><div class="l">Years consulting</div></div>
       <div class="stat reveal"><div class="n">Oracle <span class="gold">ACE</span></div><div class="l">Associate</div></div>
-      <div class="stat reveal"><div class="n">20<span class="gold">+</span></div><div class="l">Certifications</div></div>
-      <div class="stat reveal"><div class="n">2</div><div class="l">YouTube channels</div></div>
+      <div class="stat reveal"><div class="n"><span class="count" data-to="20">0</span><span class="gold">+</span></div><div class="l">Certifications</div></div>
+      <div class="stat reveal"><div class="n"><span class="count" data-to="2">0</span></div><div class="l">YouTube channels</div></div>
     </div>
   </div>
 </header>
@@ -330,21 +370,21 @@
 <section id="services">
   <div class="wrap">
     <div class="sec-head">
-      <span class="section-num">01</span>
+      
       <h2>Two ways I work with you</h2>
       <p class="lead">Same person, two engagements. Most clients start with one and grow into both.</p>
     </div>
     <div class="tracks">
       <div class="track ai reveal">
-        <span class="tag">Primary — Build</span>
+        <span class="tag">Primary · Build</span>
         <h3>AI solutions, in production</h3>
-        <p>I design and ship working AI on top of your enterprise data — autonomous agents, retrieval-augmented assistants, forecasting and anomaly detection. Not demos. Things that run.</p>
+        <p>I design and ship working AI on top of your enterprise data: autonomous agents, retrieval-augmented assistants, forecasting and anomaly detection. Not demos. Things that run.</p>
         <a class="arrow" href="#work">See the work →</a>
       </div>
       <div class="track erp reveal">
-        <span class="tag">Implementation — Oracle ERP</span>
+        <span class="tag">Implementation · Oracle ERP</span>
         <h3>Oracle Fusion, done right</h3>
-        <p>Two decades of Oracle Financials, PPM, Procurement and Supply Chain — implementations, upgrades, rollouts and hypercare across Banking, Energy, Telecom, CPG and Retail.</p>
+        <p>Two decades of Oracle Financials, PPM, Procurement and Supply Chain. Implementations, upgrades, rollouts and hypercare across Banking, Energy, Telecom, CPG and Retail.</p>
         <a class="arrow" href="#erp">My ERP track →</a>
       </div>
     </div>
@@ -355,31 +395,31 @@
 <section id="work">
   <div class="wrap">
     <div class="sec-head">
-      <span class="section-num">02</span>
+      
       <h2>Featured AI builds</h2>
-      <p class="lead">Built on data pulled from Oracle Fusion — where ERP depth meets applied AI.</p>
+      <p class="lead">Built on data pulled from Oracle Fusion, where ERP depth meets applied AI.</p>
     </div>
     <div class="projects">
       <div class="proj reveal">
-        <span class="pn">/ 01</span>
+        
         <h3>Multi-agent procurement</h3>
-        <p>A system of cooperating agents that watches inventory and triggers item replenishment on its own — turning a manual buying cycle into an autonomous loop.</p>
+        <p>A system of cooperating agents that watches inventory and triggers item replenishment on its own, turning a manual buying cycle into an autonomous loop.</p>
         <div class="chips"><span class="chip">LangGraph</span><span class="chip">Multi-agent</span><span class="chip">Oracle Fusion</span></div>
       </div>
       <div class="proj reveal">
-        <span class="pn">/ 02</span>
+        
         <h3>RAG over your financial docs</h3>
         <p>Retrieval-augmented Q&A across CSVs and PDFs, so finance teams ask questions in plain English and get grounded answers from their own data.</p>
         <div class="chips"><span class="chip">RAG</span><span class="chip">LangChain</span><span class="chip">Embeddings</span></div>
       </div>
       <div class="proj reveal">
-        <span class="pn">/ 03</span>
+        
         <h3>Payables dashboard via NLP</h3>
-        <p>A natural-language interface to AP data — ask the question, get the dashboard. No report tickets, no waiting on the analytics team.</p>
+        <p>A natural-language interface to AP data: ask the question, get the dashboard. No report tickets, no waiting on the analytics team.</p>
         <div class="chips"><span class="chip">NLP</span><span class="chip">Analytics</span><span class="chip">OTBI</span></div>
       </div>
       <div class="proj reveal">
-        <span class="pn">/ 04</span>
+        
         <h3>Forecasting &amp; churn models</h3>
         <p>Predictive models on Fusion data: customer churn, demand and sales forecasting, customer segmentation and anomaly detection that flag problems before they post.</p>
         <div class="chips"><span class="chip">scikit-learn</span><span class="chip">PyTorch</span><span class="chip">Forecasting</span></div>
@@ -392,14 +432,14 @@
 <section id="erp">
   <div class="wrap">
     <div class="sec-head">
-      <span class="section-num">03</span>
+      
       <h2>The Oracle ERP foundation</h2>
       <p class="lead">The 24 years that make the AI believable.</p>
     </div>
     <div class="erp-body">
       <div class="reveal">
-        <p><b>From Developer 2000 to Fusion Cloud R13.</b> EBS 11i, R12, and Oracle Cloud — implementations, upgrades, presales, rollouts and support across a full career of enterprise delivery.</p>
-        <p>Deep in <b>Oracle Financials and Project Accounting</b> (costing &amp; billing), with strong Supply Chain and HCM range. I've worn every hat — Solution Architect, Project Manager, Product Owner, Release and Transition Manager.</p>
+        <p><b>From Developer 2000 to Fusion Cloud R13.</b> EBS 11i, R12, and Oracle Cloud. Implementations, upgrades, presales, rollouts and support across a full career of enterprise delivery.</p>
+        <p>Deep in <b>Oracle Financials and Project Accounting</b> (costing &amp; billing), with strong Supply Chain and HCM range. I've worn every hat: Solution Architect, Project Manager, Product Owner, Release and Transition Manager.</p>
         <div class="modules">
           GL · AP · AR · FA · CM · Collections · RMCS · SLA · FAH<br>
           PPM · Procurement · Order Management · Inventory · Core HCM · OTL
@@ -425,9 +465,9 @@
 <section id="certs">
   <div class="wrap">
     <div class="sec-head">
-      <span class="section-num">04</span>
+      
       <h2>Credentials that travel</h2>
-      <p class="lead">A curated set — the AI, data and delivery certifications that matter most.</p>
+      <p class="lead">A curated set of the AI, data and delivery certifications that matter most.</p>
     </div>
     <div class="certs">
       <div class="cert reveal"><span class="badge"></span><span>Oracle ACE Associate<small>Oracle</small></span></div>
@@ -447,23 +487,23 @@
 <section id="channels">
   <div class="wrap">
     <div class="sec-head">
-      <span class="section-num">05</span>
+      
       <h2>Where I teach in public</h2>
-      <p class="lead">Two channels, two audiences — pick your lane.</p>
+      <p class="lead">Two channels, two audiences. Pick your lane.</p>
     </div>
     <div class="channels">
       <div class="channel reveal">
         <span class="yt">YouTube</span>
         <h3>May The Oracle Be With You</h3>
         <span class="handle">@KumR</span>
-        <p>Oracle ERP meets AI — walkthroughs, implementation lessons, and the practical side of Fusion Cloud.</p>
+        <p>Oracle ERP meets AI: walkthroughs, implementation lessons, and the practical side of Fusion Cloud.</p>
         <div class="sub"><a class="btn btn-ghost" href="https://www.youtube.com/@KumR" target="_blank" rel="noopener">Subscribe →</a></div>
       </div>
       <div class="channel reveal">
         <span class="yt">YouTube</span>
         <h3>The Context Engineer</h3>
         <span class="handle">@TheContextEngineer</span>
-        <p>The AI side — agents, RAG, context engineering and the tooling behind building things that actually ship.</p>
+        <p>The AI side: agents, RAG, context engineering and the tooling behind building things that actually ship.</p>
         <div class="sub"><a class="btn btn-ghost" href="https://www.youtube.com/@TheContextEngineer" target="_blank" rel="noopener">Subscribe →</a></div>
       </div>
     </div>
@@ -473,9 +513,9 @@
 <!-- =================== CONTACT =================== -->
 <section id="contact">
   <div class="wrap">
-    <span class="eyebrow" style="justify-content:center;">06 — Let's talk</span>
+    <span class="eyebrow" style="justify-content:center;">Let's talk</span>
     <h2>Have an idea for <em>AI</em> in your Oracle stack?</h2>
-    <p class="lede">Tell me what you're trying to build. The fastest path is a short discovery call — no form, no funnel.</p>
+    <p class="lede">Tell me what you're trying to build. The fastest path is a short discovery call. No form, no funnel.</p>
     <div class="contact-ctas">
       <!-- TODO: swap mailto for your Calendly link when ready -->
       <a class="btn btn-primary" href="mailto:shiv.arun.iyer@gmail.com?subject=Discovery%20call%20%E2%80%94%20AI%20solutions">Book a discovery call →</a>
@@ -527,6 +567,48 @@
     });
   }, { threshold: .14 });
   document.querySelectorAll('section .reveal').forEach(el => io.observe(el));
+
+  // count-up stats on first view
+  const countObs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting) return;
+      const el=e.target, to=+el.dataset.to, dur=1100, t0=performance.now();
+      const tick=(now)=>{
+        const p=Math.min((now-t0)/dur,1);
+        const eased=1-Math.pow(1-p,3);
+        el.textContent=Math.round(to*eased);
+        if(p<1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      countObs.unobserve(el);
+    });
+  },{threshold:.6});
+  document.querySelectorAll('.count').forEach(el=>countObs.observe(el));
+
+  // interactive: hero cursor spotlight (desktop pointers only)
+  const fine = matchMedia('(pointer:fine)').matches;
+  if(fine){
+    const hdr=document.querySelector('header');
+    hdr.addEventListener('pointermove',e=>{
+      const r=hdr.getBoundingClientRect();
+      hdr.style.setProperty('--hx',(e.clientX-r.left)+'px');
+      hdr.style.setProperty('--hy',(e.clientY-r.top)+'px');
+    });
+
+    // interactive: spotlight + subtle tilt on cards
+    const cards=document.querySelectorAll('.proj,.track,.channel');
+    cards.forEach(card=>{
+      card.addEventListener('pointermove',e=>{
+        const r=card.getBoundingClientRect();
+        const x=e.clientX-r.left, y=e.clientY-r.top;
+        card.style.setProperty('--mx',x+'px');
+        card.style.setProperty('--my',y+'px');
+        const rx=((y/r.height)-.5)*-5, ry=((x/r.width)-.5)*5;
+        card.style.transform=`perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-3px)`;
+      });
+      card.addEventListener('pointerleave',()=>{ card.style.transform=''; });
+    });
+  }
 </script>
 </body>
 </html>
