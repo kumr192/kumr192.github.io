@@ -3,354 +3,322 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Shivkumar Iyer · Oracle ERP × AI Architect</title>
-<meta name="description" content="Shivkumar Iyer (Shiv / KumR). Oracle ACE and Application Architect. 24 years in Oracle ERP, now building the AI layer on top: agents, RAG, forecasting, and the systems that put them in production." />
+<title>Shivkumar Iyer | Oracle ERP × AI Architect</title>
+<meta name="description" content="Shivkumar Iyer (Shiv / KumR). Oracle ACE Pro, Application Architect and AI Consultant. 24 years of end-to-end Oracle ERP implementation, in parallel with applied AI engineering: agents, retrieval-augmented generation and forecasting on Fusion data." />
+<meta name="author" content="Shivkumar Iyer" />
+<meta name="theme-color" content="#05100E" />
+<link rel="canonical" href="https://kumr192.github.io/" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2305100E'/%3E%3Ctext x='50' y='71' font-family='Georgia,serif' font-size='64' font-weight='700' fill='%232DD4BF' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kumr192.github.io/" />
+<meta property="og:title" content="Shivkumar Iyer | Oracle ERP × AI Architect" />
+<meta property="og:description" content="Oracle ERP implementation and applied AI engineering, equal practices. Oracle ACE Pro, 24 years." />
+<meta property="og:image" content="https://kumr192.github.io/shiv.jpg" />
+<meta property="og:image:alt" content="Shivkumar Iyer, Oracle ERP and AI Architect" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Shivkumar Iyer | Oracle ERP × AI Architect" />
+<meta name="twitter:description" content="Oracle ERP implementation and applied AI engineering, equal practices. Oracle ACE Pro, 24 years." />
+<meta name="twitter:image" content="https://kumr192.github.io/shiv.jpg" />
 
-<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
 <style>
-  /* ---------- Tokens ---------- */
   :root{
-    --ink:#05100E;
-    --ink-2:#0A1A17;
-    --ink-3:#102420;
-    --line:#1C342E;
-    --paper:#E6F2EE;
-    --paper-dim:#82A89F;
-    --paper-faint:#4B6A62;
-    --gold:#2DD4BF;        /* accent: teal */
-    --gold-soft:#5EEAD4;
-    --slate:#6C9A92;
-    --maxw:1180px;
-    --display:"Fraunces",Georgia,serif;
-    --mono:"JetBrains Mono",ui-monospace,monospace;
+    --ink:#05100E; --ink-2:#0A1A17; --ink-3:#102420;
+    --line:#1C342E; --paper:#E6F2EE; --paper-dim:#82A89F; --paper-faint:#4B6A62;
+    --teal:#2DD4BF; --teal-soft:#5EEAD4; --maxw:1180px;
+    --display:"Fraunces",Georgia,serif; --mono:"JetBrains Mono",ui-monospace,monospace;
     --body:"Hanken Grotesk",-apple-system,sans-serif;
   }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--paper);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body::before{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.035;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  a{color:inherit;text-decoration:none}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:2px}
+  ::selection{background:var(--teal);color:var(--ink)}
+  ::-webkit-scrollbar{width:10px}
+  ::-webkit-scrollbar-track{background:var(--ink)}
+  ::-webkit-scrollbar-thumb{background:var(--line);border-radius:5px}
+  ::-webkit-scrollbar-thumb:hover{background:var(--paper-faint)}
 
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--ink);
-    color:var(--paper);
-    font-family:var(--body);
-    font-size:17px;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);display:inline-flex;align-items:center;gap:10px}
+  .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 10px var(--teal)}
+  .microlabel{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--paper-faint)}
 
-  /* Grain overlay */
-  body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    z-index:9999;
-    pointer-events:none;
-    opacity:.035;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
 
-  a{color:inherit;text-decoration:none;}
-  ::selection{background:var(--gold);color:var(--ink);}
+  /* neural 3D canvas */
+  .neuro{position:absolute;inset:0;z-index:0;pointer-events:none}
+  header .wrap,#contact .wrap{position:relative;z-index:1}
+  /* progress bar */
+  #progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--teal);z-index:200;box-shadow:0 0 8px var(--teal)}
 
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
-  .eyebrow{
-    font-family:var(--mono);
-    font-size:12px;
-    letter-spacing:.22em;
-    text-transform:uppercase;
-    color:var(--gold);
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-  }
-  .eyebrow::before{
-    content:"";
-    width:7px;height:7px;border-radius:50%;
-    background:var(--gold);
-    box-shadow:0 0 10px var(--gold);
-  }
-  .section-num{
-    font-family:var(--mono);
-    font-size:12px;
-    color:var(--paper-faint);
-    letter-spacing:.1em;
-  }
+  /* nav */
+  nav{position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);background:rgba(5,16,14,.72);border-bottom:1px solid transparent;transition:border-color .3s ease}
+  nav.scrolled{border-bottom-color:var(--line)}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between}
+  .brand{font-family:var(--mono);font-weight:600;font-size:15px;letter-spacing:.02em}
+  .brand b{color:var(--teal)}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a:not(.btn){font-family:var(--mono);font-size:13px;letter-spacing:.04em;color:var(--paper-dim);transition:color .2s;position:relative}
+  .nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--teal);transition:width .28s cubic-bezier(.2,.7,.2,1)}
+  .nav-links a:not(.btn):hover::after,.nav-links a:not(.btn).active::after{width:100%}
+  .nav-links a:not(.btn):hover,.nav-links a:not(.btn).active{color:var(--paper)}
+  .btn{font-family:var(--mono);font-size:13px;letter-spacing:.03em;padding:11px 20px;border-radius:2px;transition:transform .18s ease,background .2s,color .2s,border-color .2s;display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--teal);position:relative;overflow:hidden}
+  .btn::before{content:"";position:absolute;top:0;left:-130%;width:60%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-18deg);transition:left .55s ease}
+  .btn:hover::before{left:140%}
+  .btn-primary{background:var(--teal);color:var(--ink);font-weight:600}
+  .btn-primary:hover{transform:translateY(-2px);background:var(--teal-soft)}
+  .btn-ghost{background:transparent;color:var(--paper);border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--paper-dim);transform:translateY(-2px)}
+  .nav-toggle{display:none;background:none;border:none;color:var(--paper);font-size:24px;cursor:pointer}
 
-  /* ---------- Nav ---------- */
-  nav{
-    position:sticky;top:0;z-index:100;
-    backdrop-filter:blur(12px);
-    background:rgba(11,12,14,.72);
-    border-bottom:1px solid transparent;
-    transition:border-color .3s ease;
-  }
-  nav.scrolled{border-bottom-color:var(--line);}
-  .nav-inner{
-    max-width:var(--maxw);margin:0 auto;
-    padding:18px 32px;
-    display:flex;align-items:center;justify-content:space-between;
-  }
-  .brand{
-    font-family:var(--mono);font-weight:600;font-size:15px;
-    letter-spacing:.02em;display:flex;align-items:center;gap:9px;
-  }
-  .brand b{color:var(--gold);}
-  .nav-links{display:flex;gap:34px;align-items:center;}
-  .nav-links a{
-    font-family:var(--mono);font-size:13px;letter-spacing:.04em;
-    color:var(--paper-dim);transition:color .2s;position:relative;
-  }
-  .nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--gold);transition:width .28s cubic-bezier(.2,.7,.2,1);}
-  .nav-links a:not(.btn):hover::after{width:100%;}
-  .nav-links a:hover{color:var(--paper);}
-  .btn{
-    font-family:var(--mono);font-size:13px;letter-spacing:.03em;
-    padding:11px 20px;border-radius:2px;
-    transition:transform .18s ease, background .2s, color .2s, border-color .2s;
-    display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1px solid var(--gold);
-    position:relative;overflow:hidden;
-  }
-  .btn::before{content:"";position:absolute;top:0;left:-130%;width:60%;height:100%;
-    background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);
-    transform:skewX(-18deg);transition:left .55s ease;}
-  .btn:hover::before{left:140%;}
-  .btn-primary{background:var(--gold);color:var(--ink);font-weight:600;}
-  .btn-primary:hover{transform:translateY(-2px);background:#5EEAD4;}
-  .btn-ghost{background:transparent;color:var(--paper);border-color:var(--line);}
-  .btn-ghost:hover{border-color:var(--paper-dim);transform:translateY(-2px);}
-  .nav-toggle{display:none;background:none;border:none;color:var(--paper);font-size:24px;cursor:pointer;}
-
-  /* ---------- Hero ---------- */
-  header{position:relative;padding:84px 0 96px;overflow:hidden;}
-  .hero-grid-bg{
-    position:absolute;inset:0;z-index:0;opacity:.5;
+  /* hero */
+  header{position:relative;padding:84px 0 96px;overflow:hidden}
+  .hero-grid-bg{position:absolute;inset:0;z-index:0;opacity:.5;
     background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
     background-size:64px 64px;
     -webkit-mask-image:radial-gradient(ellipse 70% 60% at 70% 30%,#000 0%,transparent 75%);
-    mask-image:radial-gradient(ellipse 70% 60% at 70% 30%,#000 0%,transparent 75%);
-  }
-  .hero{position:relative;z-index:1;display:grid;grid-template-columns:1.45fr .9fr;gap:56px;align-items:center;}
-  .hero h1{
-    font-family:var(--display);
-    font-weight:600;
-    font-size:clamp(2.6rem,5.4vw,4.6rem);
-    line-height:1.02;
-    letter-spacing:-.02em;
-    margin:26px 0 24px;
-  }
-  .hero h1 em{font-style:italic;color:var(--gold);font-weight:500;}
-  .hero h1 em{position:relative;display:inline-block;animation:aiPulse 4.2s ease-in-out infinite;}
-  @keyframes aiPulse{0%,100%{text-shadow:0 0 0 rgba(45,212,191,0);}50%{text-shadow:0 0 26px rgba(45,212,191,.55);}}
-  header::after{content:"";position:absolute;z-index:0;width:60vw;height:60vw;max-width:760px;max-height:760px;
-    right:-12%;top:-22%;border-radius:50%;pointer-events:none;
+    mask-image:radial-gradient(ellipse 70% 60% at 70% 30%,#000 0%,transparent 75%)}
+  header::after{content:"";position:absolute;z-index:0;width:60vw;height:60vw;max-width:760px;max-height:760px;right:-12%;top:-22%;border-radius:50%;pointer-events:none;
     background:radial-gradient(circle at center,rgba(45,212,191,.16),rgba(45,212,191,.05) 42%,transparent 68%);
-    filter:blur(10px);animation:auroraDrift 16s ease-in-out infinite alternate;}
-  @keyframes auroraDrift{0%{transform:translate(0,0) scale(1);}50%{transform:translate(-4%,5%) scale(1.08);}100%{transform:translate(3%,-3%) scale(.96);}}
-  .stat .n .count{font-variant-numeric:tabular-nums;}
-  .hero p.lede{font-size:1.12rem;color:var(--paper-dim);max-width:46ch;margin-bottom:34px;}
-  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px;}
-  .namecard{
-    font-family:var(--mono);font-size:13px;color:var(--paper-faint);
-    border-top:1px solid var(--line);padding-top:18px;
-  }
-  .namecard b{color:var(--paper);font-weight:600;}
+    filter:blur(10px);animation:auroraDrift 16s ease-in-out infinite alternate}
+  @keyframes auroraDrift{0%{transform:translate(0,0) scale(1)}50%{transform:translate(-4%,5%) scale(1.08)}100%{transform:translate(3%,-3%) scale(.96)}}
+  header::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:radial-gradient(420px circle at var(--hx,72%) var(--hy,28%),rgba(45,212,191,.12),transparent 68%)}
+  .hero{position:relative;z-index:1;display:grid;grid-template-columns:1.45fr .9fr;gap:56px;align-items:center}
+  .hero h1{font-family:var(--display);font-weight:600;font-size:clamp(2.6rem,5.4vw,4.6rem);line-height:1.02;letter-spacing:-.02em;margin:26px 0 24px}
+  .hero h1 em{font-style:italic;color:var(--teal);font-weight:500;display:inline-block;animation:aiPulse 4.2s ease-in-out infinite}
+  @keyframes aiPulse{0%,100%{text-shadow:0 0 0 rgba(45,212,191,0)}50%{text-shadow:0 0 26px rgba(45,212,191,.55)}}
+  .hero p.lede{font-size:1.12rem;color:var(--paper-dim);max-width:46ch;margin-bottom:34px}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+  .namecard{font-family:var(--mono);font-size:13px;color:var(--paper-faint);border-top:1px solid var(--line);padding-top:18px}
+  .namecard b{color:var(--paper);font-weight:600}
+  .portrait{position:relative;aspect-ratio:4/5;border:1px solid var(--line);border-radius:3px;overflow:hidden;
+    background:radial-gradient(120% 90% at 70% 10%,rgba(45,212,191,.13),transparent 60%),var(--ink-2)}
+  .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;z-index:1}
+  .portrait .corner{position:absolute;width:14px;height:14px;border:1px solid var(--teal);z-index:2}
+  .portrait .c1{top:14px;left:14px;border-right:0;border-bottom:0}
+  .portrait .c2{top:14px;right:14px;border-left:0;border-bottom:0}
+  .portrait .c3{bottom:14px;left:14px;border-right:0;border-top:0}
+  .portrait .c4{bottom:14px;right:14px;border-left:0;border-top:0}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);margin-top:64px;position:relative;z-index:1}
+  .stat{padding:26px 0;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:0}
+  .stat .n{font-family:var(--display);font-size:2.1rem;font-weight:600;letter-spacing:-.01em}
+  .stat .n .gold{color:var(--teal)}
+  .stat .n .count{font-variant-numeric:tabular-nums}
+  .stat .l{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--paper-dim);margin-top:4px}
 
-  /* portrait slot */
-  .portrait{
-    position:relative;aspect-ratio:4/5;border:1px solid var(--line);
-    background:
-      radial-gradient(120% 90% at 70% 10%,rgba(45,212,191,.13),transparent 60%),
-      var(--ink-2);
-    border-radius:3px;display:flex;align-items:flex-end;padding:22px;overflow:hidden;
-  }
-  .portrait::before{
-    content:"";position:absolute;inset:0;
-    background-image:linear-gradient(90deg,var(--line) 1px,transparent 1px);
-    background-size:28px 28px;opacity:.25;
-  }
-  .portrait .corner{position:absolute;width:14px;height:14px;border:1px solid var(--gold);}
-  .portrait .c1{top:14px;left:14px;border-right:0;border-bottom:0;}
-  .portrait .c2{top:14px;right:14px;border-left:0;border-bottom:0;}
-  .portrait .c3{bottom:14px;left:14px;border-right:0;border-top:0;}
-  .portrait .c4{bottom:14px;right:14px;border-left:0;border-top:0;}
-  .portrait .ph{position:relative;font-family:var(--mono);font-size:12px;color:var(--paper-faint);line-height:1.5;}
-  .portrait .ph b{display:block;color:var(--paper);font-family:var(--display);font-size:1.6rem;font-weight:600;margin-bottom:6px;letter-spacing:-.01em;}
-  .portrait-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:3px;z-index:1;}
-  .portrait .corner{z-index:2;}
+  /* sections */
+  section{padding:96px 0;border-top:1px solid var(--line);position:relative}
+  .sec-eyebrow{display:block;margin-bottom:14px}
+  .sec-head{display:flex;align-items:baseline;gap:20px;margin-bottom:48px;flex-wrap:wrap}
+  .sec-head h2{font-family:var(--display);font-weight:600;font-size:clamp(1.9rem,3.4vw,2.8rem);letter-spacing:-.02em}
+  .sec-head .lead{color:var(--paper-dim);max-width:48ch;margin-left:auto;font-size:1rem}
 
-  /* stats */
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);margin-top:64px;position:relative;z-index:1;}
-  .stat{padding:26px 0;border-right:1px solid var(--line);}
-  .stat:last-child{border-right:0;}
-  .stat .n{font-family:var(--display);font-size:2.1rem;font-weight:600;letter-spacing:-.01em;}
-  .stat .n .gold{color:var(--gold);}
-  .stat .l{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--paper-dim);margin-top:4px;}
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  .about-grid p{color:var(--paper-dim);font-size:1.08rem;line-height:1.75}
+  .about-grid p b{color:var(--paper);font-weight:600}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--paper-dim);border:1px solid var(--line);padding:6px 11px;border-radius:2px;transition:border-color .2s,color .2s}
+  .chip:hover{border-color:var(--teal);color:var(--teal)}
 
-  /* ---------- Sections ---------- */
-  section{padding:96px 0;border-top:1px solid var(--line);position:relative;}
-  .sec-head{display:flex;align-items:baseline;gap:20px;margin-bottom:48px;flex-wrap:wrap;}
-  .sec-head h2{font-family:var(--display);font-weight:600;font-size:clamp(1.9rem,3.4vw,2.8rem);letter-spacing:-.02em;}
-  .sec-head .lead{color:var(--paper-dim);max-width:48ch;margin-left:auto;font-size:1rem;}
-
-  /* dual track */
-  .tracks{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-  .track{border:1px solid var(--line);border-radius:3px;padding:34px;background:var(--ink-2);transition:border-color .25s,transform .25s;}
-  .track:hover{border-color:var(--paper-faint);transform:translateY(-3px);}
-  .track .tag{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;}
-  .track.ai .tag{color:var(--gold);}
-  .track.erp .tag{color:var(--slate);}
-  .track h3{font-family:var(--display);font-size:1.7rem;font-weight:600;margin:14px 0 12px;letter-spacing:-.01em;}
-  .track p{color:var(--paper-dim);font-size:1rem;margin-bottom:20px;}
-  .btn-primary{will-change:transform;}
-  .track .arrow{font-family:var(--mono);font-size:13px;color:var(--paper);display:inline-flex;gap:8px;align-items:center;}
-  .track.ai .arrow{color:var(--gold);}
+  /* tracks */
+  .tracks{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .card-i{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:3px;background:var(--ink-2);
+    transition:transform .22s cubic-bezier(.2,.7,.2,1),border-color .25s;transform-style:preserve-3d;will-change:transform}
+  .card-i::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:radial-gradient(220px circle at var(--mx,50%) var(--my,50%),rgba(45,212,191,.16),transparent 64%);
+    opacity:0;transition:opacity .35s ease}
+  .card-i:hover::before{opacity:1}
+  .card-i:hover{border-color:var(--paper-faint)}
+  .card-i > *{position:relative;z-index:1}
+  .track{padding:34px}
+  .track .tag{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+  .track .tag{color:var(--teal)}
+  .track h3{font-family:var(--display);font-size:1.7rem;font-weight:600;margin:14px 0 12px;letter-spacing:-.01em}
+  .track p{color:var(--paper-dim);font-size:1rem;margin-bottom:20px}
+  .track .arrow{font-family:var(--mono);font-size:13px;display:inline-flex;gap:8px;align-items:center}
+  .track .arrow{color:var(--teal)}
 
   /* projects */
-  .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden;}
-  .proj{background:var(--ink);padding:38px 34px;transition:background .25s;position:relative;}
-  .proj:hover{background:var(--ink-2);}
-  .proj .pn{font-family:var(--mono);font-size:12px;color:var(--paper-faint);}
-  .proj h3{font-family:var(--display);font-size:1.5rem;font-weight:600;margin:16px 0 12px;line-height:1.15;letter-spacing:-.01em;}
-  .proj p{color:var(--paper-dim);font-size:.98rem;margin-bottom:20px;}
-  .chips{display:flex;flex-wrap:wrap;gap:8px;}
-  .chip{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--paper-dim);border:1px solid var(--line);padding:5px 10px;border-radius:2px;}
+  .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+  .proj{background:var(--ink);padding:38px 34px;transition:background .25s;position:relative;overflow:hidden}
+  .proj::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:radial-gradient(220px circle at var(--mx,50%) var(--my,50%),rgba(45,212,191,.14),transparent 64%);
+    opacity:0;transition:opacity .35s ease}
+  .proj:hover::before{opacity:1}
+  .proj:hover{background:var(--ink-2)}
+  .proj > *{position:relative;z-index:1}
+  .proj .ptag{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:10px}
+  .proj h3{font-family:var(--display);font-size:1.5rem;font-weight:600;margin:0 0 12px;line-height:1.15;letter-spacing:-.01em}
+  .proj p{color:var(--paper-dim);font-size:.98rem;margin-bottom:20px}
+  .more-builds{margin-top:34px}
 
-  /* ERP credibility */
-  .erp-body{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start;}
-  .erp-body p{color:var(--paper-dim);margin-bottom:18px;}
-  .erp-body p b{color:var(--paper);font-weight:600;}
-  .clients{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;}
-  .client{font-family:var(--display);font-size:1.15rem;color:var(--paper);border:1px solid var(--line);padding:12px 18px;border-radius:2px;letter-spacing:-.01em;transition:border-color .2s,color .2s;}
-  .client:hover{border-color:var(--gold);color:var(--gold);}
-  .modules{font-family:var(--mono);font-size:12.5px;color:var(--paper-dim);line-height:2;letter-spacing:.02em;margin-top:8px;}
+  /* stack */
+  .stackgrid{display:grid;grid-template-columns:1fr 1fr;gap:38px 56px}
+  .stackgroup .microlabel{display:block;margin-bottom:14px}
+
+  /* timeline */
+  .timeline{position:relative;margin-left:8px}
+  .timeline::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:1px;background:var(--line)}
+  .tl-item{position:relative;padding:0 0 42px 36px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item::before{content:"";position:absolute;left:-5px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--ink);border:2px solid var(--paper-faint);transition:border-color .4s,box-shadow .4s;z-index:2}
+  .tl-item.lit::before{border-color:var(--teal);box-shadow:0 0 12px rgba(45,212,191,.5)}
+  .tl-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 18px}
+  .tl-head h3{font-family:var(--display);font-size:1.45rem;font-weight:600;letter-spacing:-.01em}
+  .tl-head .yrs{font-family:var(--mono);font-size:13px;color:var(--paper-faint);margin-left:auto}
+  .tl-role{font-family:var(--mono);font-size:13px;color:var(--teal);margin-top:3px}
+  .tl-note{color:var(--paper-dim);font-size:.98rem;margin-top:9px;max-width:78ch}
+  .tl-edu{margin-top:36px;font-family:var(--mono);font-size:13px;color:var(--paper-faint)}
+  .tl-edu b{color:var(--paper-dim);font-weight:600}
+
+  /* erp */
+  .erp-body{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+  .erp-body p{color:var(--paper-dim);margin-bottom:18px}
+  .erp-body p b{color:var(--paper);font-weight:600}
+  .clients{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  .client{font-family:var(--display);font-size:1.15rem;color:var(--paper);border:1px solid var(--line);padding:12px 18px;border-radius:2px;letter-spacing:-.01em;transition:border-color .2s,color .2s}
+  .client:hover{border-color:var(--teal);color:var(--teal)}
+  .modules{font-family:var(--mono);font-size:12.5px;color:var(--paper-dim);line-height:2;letter-spacing:.02em;margin-top:8px}
 
   /* certs */
-  .certs{display:flex;flex-wrap:wrap;gap:12px;}
-  .cert{display:flex;align-items:center;gap:12px;border:1px solid var(--line);padding:14px 18px;border-radius:3px;background:var(--ink-2);transition:transform .2s,border-color .2s;}
-  .cert:hover{transform:translateY(-2px);border-color:var(--paper-faint);}
-  .cert .badge{width:8px;height:8px;border-radius:50%;background:var(--gold);flex:0 0 auto;}
-  .cert.pm .badge{background:var(--slate);}
-  .cert span{font-family:var(--mono);font-size:12.5px;letter-spacing:.02em;}
-  .cert small{display:block;color:var(--paper-faint);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;margin-top:2px;}
+  .certcols{display:grid;grid-template-columns:repeat(3,1fr);gap:38px}
+  .certcol .microlabel{display:block;margin-bottom:16px;color:var(--teal)}
+  .cert{display:flex;align-items:center;gap:12px;border:1px solid var(--line);padding:11px 15px;border-radius:3px;background:var(--ink-2);transition:transform .2s,border-color .2s;margin-bottom:10px}
+  .cert:hover{transform:translateY(-2px);border-color:var(--paper-faint)}
+  .cert .dot{width:7px;height:7px;border-radius:50%;background:var(--teal);flex:0 0 auto}
+  .cert span{font-family:var(--mono);font-size:12px;letter-spacing:.02em}
 
   /* channels */
-  .channels{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-  .channel{border:1px solid var(--line);border-radius:3px;padding:36px;background:var(--ink-2);transition:border-color .25s,transform .25s;display:flex;flex-direction:column;}
-  .channel:hover{border-color:var(--gold);transform:translateY(-3px);}
-  .channel .yt{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#ff5a52;display:flex;align-items:center;gap:9px;}
-  .channel .yt::before{content:"▶";font-size:10px;}
-  .channel h3{font-family:var(--display);font-size:1.55rem;font-weight:600;margin:14px 0 6px;letter-spacing:-.01em;}
-  .channel .handle{font-family:var(--mono);font-size:13px;color:var(--paper-dim);}
-  .channel p{color:var(--paper-dim);font-size:.97rem;margin:14px 0 24px;}
-  .channel .sub{margin-top:auto;}
+  .channels{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .channel{padding:36px;display:flex;flex-direction:column}
+  .channel:hover{border-color:var(--teal)}
+  .channel .yt{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#ff5a52;display:flex;align-items:center;gap:9px}
+  .channel .yt::before{content:"▶";font-size:10px}
+  .channel h3{font-family:var(--display);font-size:1.55rem;font-weight:600;margin:14px 0 6px;letter-spacing:-.01em}
+  .channel .handle{font-family:var(--mono);font-size:13px;color:var(--paper-dim)}
+  .channel p{color:var(--paper-dim);font-size:.97rem;margin:14px 0 24px}
+  .channel .sub{margin-top:auto}
 
   /* contact */
-  #contact{text-align:center;}
-  #contact h2{font-family:var(--display);font-size:clamp(2.2rem,5vw,3.6rem);font-weight:600;letter-spacing:-.02em;line-height:1.05;max-width:18ch;margin:18px auto 18px;}
-  #contact h2 em{font-style:italic;color:var(--gold);font-weight:500;}
-  #contact .lede{color:var(--paper-dim);max-width:48ch;margin:0 auto 36px;}
-  .contact-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:56px;}
-  .socials{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-  .social{font-family:var(--mono);font-size:13px;letter-spacing:.03em;color:var(--paper-dim);border:1px solid var(--line);padding:11px 18px;border-radius:2px;transition:color .2s,border-color .2s;}
-  .social:hover{color:var(--gold);border-color:var(--gold);}
+  #contact{text-align:center}
+  #contact h2{font-family:var(--display);font-size:clamp(2.2rem,5vw,3.6rem);font-weight:600;letter-spacing:-.02em;line-height:1.05;max-width:18ch;margin:18px auto 18px}
+  #contact h2 em{font-style:italic;color:var(--teal);font-weight:500}
+  #contact .lede{color:var(--paper-dim);max-width:48ch;margin:0 auto 36px}
+  .contact-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:56px}
+  .socials{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .social{font-family:var(--mono);font-size:13px;letter-spacing:.03em;color:var(--paper-dim);border:1px solid var(--line);padding:11px 18px;border-radius:2px;transition:color .2s,border-color .2s}
+  .social:hover{color:var(--teal);border-color:var(--teal)}
 
-  footer{border-top:1px solid var(--line);padding:32px 0;}
-  .foot-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-family:var(--mono);font-size:12px;color:var(--paper-faint);letter-spacing:.04em;}
+  footer{border-top:1px solid var(--line);padding:32px 0}
+  .foot-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-family:var(--mono);font-size:12px;color:var(--paper-faint);letter-spacing:.04em}
 
   /* reveal */
-  .reveal{opacity:0;transform:translateY(26px);filter:blur(6px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1),filter .8s ease;}
-  .reveal.in{filter:blur(0);}
-  .reveal.in{opacity:1;transform:none;}
-  .hero .reveal{transition-delay:var(--d,0s);}
+  .reveal{opacity:0;transform:translateY(26px);filter:blur(6px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1),filter .8s ease}
+  .reveal.in{opacity:1;transform:none;filter:blur(0)}
+  .hero .reveal{transition-delay:var(--d,0s)}
 
-  /* ---------- Responsive ---------- */
+
+  /* headline word stagger */
+  .hero h1 .w{display:inline-block;opacity:0;transform:translateY(.4em);filter:blur(5px);
+    transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1),filter .6s ease;
+    transition-delay:var(--wd,0ms)}
+  .hero h1.go .w{opacity:1;transform:none;filter:blur(0)}
+
+  /* delivery cards */
+  .delgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .dcard{padding:30px}
+  .dcard .tag{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
+  .dcard h3{font-family:var(--display);font-size:1.35rem;font-weight:600;margin:12px 0 10px;letter-spacing:-.01em}
+  .dcard p{color:var(--paper-dim);font-size:.97rem}
+
+  /* timeline draw-on-scroll */
+  .timeline .tl-fill{position:absolute;left:0;top:6px;width:1px;height:0;background:var(--teal);
+    box-shadow:0 0 8px rgba(45,212,191,.6);z-index:1}
+
+  /* course library */
+  .courses{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .course{display:flex;justify-content:space-between;align-items:center;gap:14px;border:1px solid var(--line);border-radius:3px;padding:12px 16px;background:var(--ink-2);transition:border-color .2s,transform .2s}
+  .course:hover{border-color:var(--teal);transform:translateY(-2px)}
+  .course .ct{font-size:.95rem}
+  .course .cn{font-family:var(--mono);font-size:11px;color:var(--paper-faint);white-space:nowrap}
   @media(max-width:880px){
-    .nav-links{
-      position:fixed;inset:0 0 auto 0;top:61px;flex-direction:column;gap:0;
-      background:var(--ink-2);border-bottom:1px solid var(--line);
-      padding:10px 0;transform:translateY(-120%);transition:transform .3s ease;
-    }
-    .nav-links.open{transform:none;}
-    .nav-links a{padding:15px 32px;width:100%;border-bottom:1px solid var(--line);}
-    .nav-links .btn{margin:14px 32px;justify-content:center;}
-    .nav-toggle{display:block;}
-    .hero{grid-template-columns:1fr;gap:40px;}
-    .portrait{max-width:340px;}
-    .stats{grid-template-columns:1fr 1fr;}
-    .stat:nth-child(2n){border-right:0;}
-    .stat:nth-child(-n+2){border-bottom:1px solid var(--line);}
-    .tracks,.projects,.channels,.erp-body{grid-template-columns:1fr;}
-    .sec-head .lead{margin-left:0;}
+    .nav-links{position:fixed;inset:0 0 auto 0;top:61px;flex-direction:column;gap:0;background:var(--ink-2);border-bottom:1px solid var(--line);padding:10px 0;transform:translateY(-120%);transition:transform .3s ease}
+    .nav-links.open{transform:none}
+    .nav-links a{padding:15px 32px;width:100%;border-bottom:1px solid var(--line)}
+    .nav-links a:not(.btn)::after{display:none}
+    .nav-links .btn{margin:14px 32px;justify-content:center}
+    .nav-toggle{display:block}
+    .hero{grid-template-columns:1fr;gap:40px}
+    .portrait{max-width:340px}
+    .stats{grid-template-columns:1fr 1fr}
+    .stat:nth-child(2n){border-right:0}
+    .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+    .tracks,.projects,.channels,.erp-body,.about-grid,.stackgrid,.delgrid,.courses{grid-template-columns:1fr}
+    .certcols{grid-template-columns:1fr}
+    .sec-head .lead{margin-left:0}
+    .tl-head .yrs{margin-left:0;width:100%}
   }
   @media(max-width:520px){
-    .wrap,.nav-inner,.foot-inner{padding-left:22px;padding-right:22px;}
-    body{font-size:16px;}
+    .wrap,.nav-inner,.foot-inner{padding-left:22px;padding-right:22px}
+    body{font-size:16px}
   }
-
   @media (prefers-reduced-motion: reduce){
-    *,*::before,*::after{animation:none !important;}
-    .reveal{filter:none;transition:opacity .4s ease,transform .4s ease;}
-    header::after{animation:none;}
-    header::before{display:none;}
-    .hero h1 em{animation:none;}
-    .proj::before,.track::before,.channel::before{display:none;}
+    .hero h1 .w{opacity:1;transform:none;filter:none;transition:none}
+    *,*::before,*::after{animation:none !important}
+    .reveal{filter:none;transition:opacity .4s ease,transform .4s ease}
+    header::before{display:none}
+    .proj::before,.card-i::before{display:none}
+    html{scroll-behavior:auto}
   }
-
-  /* ===== interactive: hero cursor spotlight ===== */
-  header::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
-    background:radial-gradient(420px circle at var(--hx,72%) var(--hy,28%),rgba(45,212,191,.12),transparent 68%);
-    transition:background .12s ease-out;}
-  /* ===== interactive: pointer-tracking spotlight cards ===== */
-  .track,.channel{position:relative;overflow:hidden;}
-  .proj > *,.track > *,.channel > *{position:relative;z-index:1;}
-  .proj::before,.track::before,.channel::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
-    background:radial-gradient(220px circle at var(--mx,50%) var(--my,50%),rgba(45,212,191,.16),transparent 64%);
-    opacity:0;transition:opacity .35s ease;}
-  .proj:hover::before,.track:hover::before,.channel:hover::before{opacity:1;}
-  /* ===== interactive: gentle card tilt ===== */
-  .proj,.track,.channel,.cert{transition:transform .22s cubic-bezier(.2,.7,.2,1),border-color .25s;transform-style:preserve-3d;will-change:transform;}
 </style>
 </head>
 <body>
+<div id="progress"></div>
 
-<!-- =================== NAV =================== -->
 <nav id="nav">
   <div class="nav-inner">
     <a href="#top" class="brand">Shivkumar Iyer<b>.</b></a>
     <div class="nav-links" id="navlinks">
-      <a href="#work">AI Work</a>
+      <a href="#about">About</a>
       <a href="#erp">Oracle ERP</a>
-      <a href="#channels">Channels</a>
+      <a href="#work">AI Work</a>
+      <a href="#stack">Stack</a>
+      <a href="#career">Career</a>
       <a href="#contact">Contact</a>
-      <!-- TODO: swap mailto for your Calendly link, e.g. https://calendly.com/your-handle -->
-      <a class="btn btn-primary" href="mailto:shiv.arun.iyer@gmail.com?subject=Discovery%20call%20%E2%80%94%20AI%20solutions">Book a call</a>
+      <a class="btn btn-primary" href="mailto:shiv.arun.iyer@gmail.com?subject=Discovery%20call">Book a call</a>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
   </div>
 </nav>
 
-<!-- =================== HERO =================== -->
+<!-- HERO -->
 <header id="top">
   <div class="hero-grid-bg"></div>
+  <canvas class="neuro" id="neuroHero" aria-hidden="true"></canvas>
   <div class="wrap">
     <div class="hero">
-      <div class="hero-left">
-        <span class="eyebrow reveal" style="--d:0s">Oracle ACE · AI Consultant · Application Architect · Houston, TX</span>
-        <h1 class="reveal" style="--d:.08s">24 years in Oracle ERP.<br>Now I ship the <em>AI</em> on top of it.</h1>
-        <p class="lede reveal" style="--d:.16s">I'm Shivkumar Iyer, an enterprise Oracle architect who builds the AI layer real businesses run on: agents, RAG, forecasting, and the systems that put them in production.</p>
+      <div>
+        <span class="eyebrow reveal" style="--d:0s">Oracle ACE Pro · AI Consultant · Application Architect · Houston, TX</span>
+        <h1 class="reveal" style="--d:.08s">I implement Oracle Fusion ERP.<br>I engineer the <em>AI</em> on top.</h1>
+        <p class="lede reveal" style="--d:.16s">Shivkumar Iyer, Oracle ACE Pro. 24 years of end-to-end ERP delivery on one side. Hands-on AI engineering on the other: agents, retrieval systems and forecasting, shipped to production.</p>
         <div class="hero-ctas reveal" style="--d:.24s">
-          <a class="btn btn-primary" href="mailto:shiv.arun.iyer@gmail.com?subject=Discovery%20call%20%E2%80%94%20AI%20solutions">Book a discovery call →</a>
-          <a class="btn btn-ghost" href="#erp">Hire me for Oracle ERP</a>
+          <a class="btn btn-primary" href="mailto:shiv.arun.iyer@gmail.com?subject=Discovery%20call">Book a discovery call →</a>
+          <a class="btn btn-ghost" href="#services">See both practices</a>
         </div>
-        <div class="namecard reveal" style="--d:.32s"><b>Shivkumar Iyer</b> · also Shiv / KumR · Application Architect, AI Consultant, Oracle ACE</div>
+        <div class="namecard reveal" style="--d:.32s"><b>Shivkumar Iyer</b> · also Shiv / KumR · Application Architect, AI Consultant, Oracle ACE Pro</div>
       </div>
-      <div class="hero-right reveal" style="--d:.2s">
+      <div class="reveal" style="--d:.2s">
         <div class="portrait">
-          <img class="portrait-img" src="shiv.jpg" alt="Shivkumar Iyer, Oracle ERP and AI Architect" />
+          <img src="shiv.jpg" alt="Shivkumar Iyer, Oracle ERP and AI Architect" onerror="this.style.display='none'" />
           <span class="corner c1"></span><span class="corner c2"></span>
           <span class="corner c3"></span><span class="corner c4"></span>
         </div>
@@ -358,168 +326,388 @@
     </div>
 
     <div class="stats">
-      <div class="stat reveal"><div class="n"><span class="gold count" data-to="24">0</span></div><div class="l">Years consulting</div></div>
-      <div class="stat reveal"><div class="n">Oracle <span class="gold">ACE</span></div><div class="l">Associate</div></div>
-      <div class="stat reveal"><div class="n"><span class="count" data-to="20">0</span><span class="gold">+</span></div><div class="l">Certifications</div></div>
-      <div class="stat reveal"><div class="n"><span class="count" data-to="2">0</span></div><div class="l">YouTube channels</div></div>
+      <div class="stat reveal"><div class="n"><span class="gold count" data-to="24">24</span></div><div class="l">Years consulting</div></div>
+      <div class="stat reveal"><div class="n">Oracle <span class="gold">ACE</span></div><div class="l">Pro</div></div>
+      <div class="stat reveal"><div class="n"><span class="count" data-to="20">20</span><span class="gold">+</span></div><div class="l">Certifications</div></div>
+      <div class="stat reveal"><div class="n"><span class="count" data-to="490">490</span><span class="gold">+</span></div><div class="l">Free lessons on YouTube</div></div>
     </div>
   </div>
 </header>
 
-<!-- =================== DUAL TRACK =================== -->
-<section id="services">
+<main>
+
+<!-- ABOUT -->
+<section id="about">
   <div class="wrap">
-    <div class="sec-head">
-      
-      <h2>Two ways I work with you</h2>
-      <p class="lead">Same person, two engagements. Most clients start with one and grow into both.</p>
-    </div>
-    <div class="tracks">
-      <div class="track ai reveal">
-        <span class="tag">Primary · Build</span>
-        <h3>AI solutions, in production</h3>
-        <p>I design and ship working AI on top of your enterprise data: autonomous agents, retrieval-augmented assistants, forecasting and anomaly detection. Not demos. Things that run.</p>
-        <a class="arrow" href="#work">See the work →</a>
+    <span class="eyebrow sec-eyebrow">About</span>
+    <div class="about-grid">
+      <div class="reveal">
+        <p><b>I'm an IT architect with 24 years in consulting.</b> I've played many roles along the way: Project Manager, Product Manager, Solution Architect, Release Manager, Transition Manager. I combine Oracle ERP with machine learning, deep learning and data science, and my track record spans implementations, upgrades, rollouts, support and quality across Financial Services, Telecom, Retail, Consumer Packaged Goods and Energy. I've integrated Oracle ERP with platforms like SAP Concur, Paycom and CyberSource. I'm a strong advocate of learning by getting my hands dirty, and I've delivered projects in retrieval-augmented generation, recommendations, segmentation and AI agents. The future is here, and I'm part of it.</p>
       </div>
-      <div class="track erp reveal">
-        <span class="tag">Implementation · Oracle ERP</span>
-        <h3>Oracle Fusion, done right</h3>
-        <p>Two decades of Oracle Financials, PPM, Procurement and Supply Chain. Implementations, upgrades, rollouts and hypercare across Banking, Energy, Telecom, CPG and Retail.</p>
-        <a class="arrow" href="#erp">My ERP track →</a>
+      <div class="reveal">
+        <span class="microlabel" style="display:block;margin-bottom:14px;">Roles I've held</span>
+        <div class="chips">
+          <span class="chip">Solution Architect</span>
+          <span class="chip">Project Manager</span>
+          <span class="chip">Product Owner</span>
+          <span class="chip">Release Manager</span>
+          <span class="chip">Transition Manager</span>
+          <span class="chip">Service Delivery Manager</span>
+        </div>
+        <span class="microlabel" style="display:block;margin:26px 0 14px;">Where I've delivered</span>
+        <div class="chips">
+          <span class="chip">United States · Houston, Austin, Stamford</span>
+          <span class="chip">Czech Republic · Prague</span>
+          <span class="chip">India · Mumbai, Chennai</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- =================== AI WORK =================== -->
-<section id="work">
+<!-- SERVICES -->
+<section id="services">
   <div class="wrap">
+    <span class="eyebrow sec-eyebrow">Engagements</span>
     <div class="sec-head">
-      
-      <h2>Featured AI builds</h2>
-      <p class="lead">Built on data pulled from Oracle Fusion, where ERP depth meets applied AI.</p>
+      <h2>Two ways I work with you</h2>
+      <p class="lead">Two practices, equal weight. Most clients start with one and grow into both.</p>
+    </div>
+    <div class="tracks">
+      <div class="card-i track erp reveal">
+        <span class="tag">Practice · Oracle ERP</span>
+        <h3>Oracle Fusion, implemented end to end</h3>
+        <p>Discovery to hypercare: Financials, Project Portfolio Management, Procurement and Supply Chain implementations, upgrades, rollouts and support across Banking, Energy, Telecom, Consumer Packaged Goods and Retail.</p>
+        <a class="arrow" href="#erp">The ERP practice →</a>
+      </div>
+      <div class="card-i track ai reveal">
+        <span class="tag">Practice · Applied AI</span>
+        <h3>AI solutions, in production</h3>
+        <p>Working AI on enterprise data: autonomous agents and sub-agents, retrieval-augmented assistants, forecasting and anomaly detection. Not demos. Things that run.</p>
+        <a class="arrow" href="#work">The AI practice →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ERP PRACTICE -->
+<section id="erp">
+  <div class="wrap">
+    <span class="eyebrow sec-eyebrow">Oracle ERP</span>
+    <div class="sec-head">
+      <h2>The Oracle ERP practice</h2>
+      <p class="lead">The full implementation lifecycle, run for 24 years: discovery to hypercare.</p>
     </div>
     <div class="projects">
       <div class="proj reveal">
-        
+        <span class="ptag">Discover &amp; design</span>
+        <h3>Requirements to global design</h3>
+        <p>Presales, requirement gathering and fit-gap mapping into implementable global designs. Current and future state business processes documented from level one to level three.</p>
+        <div class="chips"><span class="chip">Presales</span><span class="chip">Fit-gap</span><span class="chip">Process design</span></div>
+      </div>
+      <div class="proj reveal">
+        <span class="ptag">Configure &amp; build</span>
+        <h3>Fusion, configured with a spine</h3>
+        <p>Oracle Cloud applications configured to the design, with clear functional specs behind every setup. Subledger Accounting and Financial Accounting Hub rules, approval workflows through Business Process Management, and role-based access control.</p>
+        <div class="chips"><span class="chip">Subledger Accounting</span><span class="chip">Approval workflows</span><span class="chip">Access control</span></div>
+      </div>
+      <div class="proj reveal">
+        <span class="ptag">Integrate &amp; convert</span>
+        <h3>Data in, systems talking</h3>
+        <p>Data conversion pipelines and interfaces that make cutovers boring, plus integrations with SAP Concur, Paycom, CyberSource, banks and B2B platforms over Oracle REST APIs.</p>
+        <div class="chips"><span class="chip">Conversions</span><span class="chip">Integrations</span><span class="chip">REST APIs</span></div>
+      </div>
+      <div class="proj reveal">
+        <span class="ptag">Test &amp; train</span>
+        <h3>Proven before go-live</h3>
+        <p>System integration and user acceptance test scripts, regression suites for every quarterly release, and the training materials, job aids and SOPs that make adoption stick.</p>
+        <div class="chips"><span class="chip">Acceptance testing</span><span class="chip">Regression</span><span class="chip">Training &amp; SOPs</span></div>
+      </div>
+      <div class="proj reveal">
+        <span class="ptag">Deploy &amp; transition</span>
+        <h3>Cutover without drama</h3>
+        <p>Conference room pilots through cutover and go-live, run with sprint planning, demos and retrospectives. Transition and quarterly release management as the program lands.</p>
+        <div class="chips"><span class="chip">Go-live</span><span class="chip">Transition mgmt</span><span class="chip">Release mgmt</span></div>
+      </div>
+      <div class="proj reveal">
+        <span class="ptag">Run &amp; improve</span>
+        <h3>Hypercare and beyond</h3>
+        <p>Managed production support at fireman grade, enhancements, and new-feature adoption with every Oracle Cloud release, so the system keeps earning its keep.</p>
+        <div class="chips"><span class="chip">Hypercare</span><span class="chip">Production support</span><span class="chip">Enhancements</span></div>
+      </div>
+    </div>
+
+    <span class="microlabel" style="display:block;margin:44px 0 20px;">Scope &amp; footprint</span>
+    <div class="erp-body">
+      <div class="reveal">
+        <p><b>From Developer 2000 to Fusion Cloud Release 13.</b> E-Business Suite 11i, Release 12, and Oracle Cloud: implementations, upgrades, presales, rollouts and support across a full career of enterprise delivery.</p>
+        <p>Deep in <b>Oracle Financials and Project Accounting</b> (costing and billing), with strong Supply Chain and Human Capital Management range.</p>
+        <div class="modules">
+          General Ledger · Accounts Payable · Accounts Receivable · Fixed Assets · Cash Management · Collections · Revenue Management · Subledger Accounting · Financial Accounting Hub<br>
+          Project Portfolio Management · Procurement · Order Management · Inventory · Core Human Capital Management · Time and Labor
+        </div>
+      </div>
+      <div class="reveal">
+        <span class="microlabel" style="display:block;margin-bottom:16px;">Companies I've worked with</span>
+        <div class="clients" style="margin-bottom:28px;">
+          <span class="client">IBM</span>
+          <span class="client">Accenture</span>
+          <span class="client">Capgemini</span>
+          <span class="client">UST</span>
+          <span class="client">Wipro</span>
+          <span class="client">TCS</span>
+        </div>
+        <span class="microlabel" style="display:block;margin-bottom:16px;">Industries served</span>
+        <div class="chips">
+          <span class="chip">Financial Services</span>
+          <span class="chip">Banking</span>
+          <span class="chip">Oil &amp; Gas</span>
+          <span class="chip">Energy &amp; Utilities</span>
+          <span class="chip">Telecom</span>
+          <span class="chip">Third-Party Logistics</span>
+          <span class="chip">Consumer Packaged Goods</span>
+          <span class="chip">Manufacturing</span>
+          <span class="chip">Retail</span>
+          <span class="chip">Talent Management</span>
+        </div>
+        <span class="microlabel" style="display:block;margin:28px 0 16px;">Clients I've served</span>
+        <div class="chips">
+          <span class="chip">T-Mobile</span><span class="chip">GE</span><span class="chip">Dell</span>
+          <span class="chip">Best Buy</span><span class="chip">Bank of America</span><span class="chip">Citibank</span>
+          <span class="chip">Office Depot</span><span class="chip">CommScope</span><span class="chip">Suez</span>
+          <span class="chip">TitleMax</span><span class="chip">GP Strategies</span><span class="chip">GTZ</span>
+          <span class="chip">Dana Incorporated</span><span class="chip">Gorilla Glue</span><span class="chip">Martin Brothers</span>
+          <span class="chip">DRW Holdings</span><span class="chip">Monster</span><span class="chip">Ambuja Cements</span>
+          <span class="chip">Indian Railways</span><span class="chip">Wockhardt Pharma</span><span class="chip">Chennai Port Trust</span>
+        </div>
+        <span class="microlabel" style="display:block;margin:28px 0 16px;">Global delivery</span>
+        <div class="chips">
+          <span class="chip">United States</span><span class="chip">Czech Republic · Prague</span><span class="chip">India</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI WORK -->
+<section id="work">
+  <div class="wrap">
+    <span class="eyebrow sec-eyebrow">AI Work</span>
+    <div class="sec-head">
+      <h2>The AI practice</h2>
+      <p class="lead">Agents, sub-agents, retrieval and models: real builds on Oracle Fusion data.</p>
+    </div>
+    <div class="projects">
+      <div class="proj reveal">
         <h3>Multi-agent procurement</h3>
-        <p>A system of cooperating agents that watches inventory and triggers item replenishment on its own, turning a manual buying cycle into an autonomous loop.</p>
+        <p>Cooperating agents watch inventory, decide replenishment and raise the action, turning a manual buying cycle into an autonomous loop built on Fusion procurement data.</p>
         <div class="chips"><span class="chip">LangGraph</span><span class="chip">Multi-agent</span><span class="chip">Oracle Fusion</span></div>
       </div>
       <div class="proj reveal">
-        
-        <h3>RAG over your financial docs</h3>
-        <p>Retrieval-augmented Q&A across CSVs and PDFs, so finance teams ask questions in plain English and get grounded answers from their own data.</p>
-        <div class="chips"><span class="chip">RAG</span><span class="chip">LangChain</span><span class="chip">Embeddings</span></div>
+        <h3>Ask your financial documents</h3>
+        <p>Retrieval-augmented generation across spreadsheets and PDF documents: finance teams ask in plain English and get grounded answers with the source in hand. Self-serve finance knowledge, done right.</p>
+        <div class="chips"><span class="chip">Retrieval-Augmented Generation</span><span class="chip">LangChain</span><span class="chip">Embeddings</span></div>
       </div>
       <div class="proj reveal">
-        
-        <h3>Payables dashboard via NLP</h3>
-        <p>A natural-language interface to AP data: ask the question, get the dashboard. No report tickets, no waiting on the analytics team.</p>
-        <div class="chips"><span class="chip">NLP</span><span class="chip">Analytics</span><span class="chip">OTBI</span></div>
+        <h3>Payables dashboards in plain English</h3>
+        <p>A natural-language interface to accounts payable data: ask the question, get the dashboard. Controllers skip the report ticket and see their liabilities the moment they wonder.</p>
+        <div class="chips"><span class="chip">Natural language</span><span class="chip">Analytics</span><span class="chip">Transactional Business Intelligence</span></div>
       </div>
       <div class="proj reveal">
-        
-        <h3>Forecasting &amp; churn models</h3>
-        <p>Predictive models on Fusion data: customer churn, demand and sales forecasting, customer segmentation and anomaly detection that flag problems before they post.</p>
+        <h3>Churn &amp; sales forecasting</h3>
+        <p>Predictive models on Fusion data: customer churn, demand and product sales forecasting that surface risk and demand before the numbers post.</p>
         <div class="chips"><span class="chip">scikit-learn</span><span class="chip">PyTorch</span><span class="chip">Forecasting</span></div>
       </div>
+      <div class="proj reveal">
+        <h3>Anomaly detection on financials</h3>
+        <p>Models that flag unusual transactions and patterns in financial data before they flow downstream, cutting the cost of catching problems late.</p>
+        <div class="chips"><span class="chip">Anomaly Detection</span><span class="chip">Python</span><span class="chip">Fusion data</span></div>
+      </div>
+      <div class="proj reveal">
+        <h3>Oracle-native AI agents</h3>
+        <p>Supervisor agents orchestrating workflow sub-agents inside the Oracle stack itself: Agentic App patterns certified on Release 1 and 2 of Oracle AI Agent Studio.</p>
+        <div class="chips"><span class="chip">AI Agent Studio</span><span class="chip">Supervisor Agent</span><span class="chip">Workflow Agent</span></div>
+      </div>
     </div>
+    <div class="more-builds reveal">
+      <span class="microlabel" style="display:block;margin-bottom:14px;">More builds on Fusion data</span>
+      <div class="chips">
+        <span class="chip">Customer Segmentation</span>
+        <span class="chip">Product Recommendation</span>
+        <span class="chip">Sentiment Analysis</span>
+        <span class="chip">Demand Forecasting</span>
+        <span class="chip">Product Sales Forecasting</span>
+        <span class="chip">Customer Dispute Resolution</span>
+        <span class="chip">Fixed Asset Retirement Readiness</span>
+      </div>
+    </div>
+    <p class="microlabel" style="margin-top:26px">Foundations: exploratory data analysis on Fusion extracts · cleaning · conversion · validation · visualization · data storytelling</p>
   </div>
 </section>
 
-<!-- =================== ERP =================== -->
-<section id="erp">
+<!-- STACK -->
+<section id="stack">
   <div class="wrap">
+    <span class="eyebrow sec-eyebrow">Stack</span>
     <div class="sec-head">
-      
-      <h2>The Oracle ERP foundation</h2>
-      <p class="lead">The 24 years that make the AI believable.</p>
+      <h2>The stack I build with</h2>
+      <p class="lead">Hands-on, daily. The tools behind the agents, the models, and the shipping.</p>
     </div>
-    <div class="erp-body">
-      <div class="reveal">
-        <p><b>From Developer 2000 to Fusion Cloud R13.</b> EBS 11i, R12, and Oracle Cloud. Implementations, upgrades, presales, rollouts and support across a full career of enterprise delivery.</p>
-        <p>Deep in <b>Oracle Financials and Project Accounting</b> (costing &amp; billing), with strong Supply Chain and HCM range. I've worn every hat: Solution Architect, Project Manager, Product Owner, Release and Transition Manager.</p>
-        <div class="modules">
-          GL · AP · AR · FA · CM · Collections · RMCS · SLA · FAH<br>
-          PPM · Procurement · Order Management · Inventory · Core HCM · OTL
-        </div>
+    <div class="stackgrid">
+      <div class="stackgroup reveal">
+        <span class="microlabel">Agentic &amp; coding</span>
+        <div class="chips"><span class="chip">Claude Code</span><span class="chip">Claude Agent SDK</span><span class="chip">Codex</span><span class="chip">Antigravity</span><span class="chip">Cursor</span></div>
       </div>
-      <div class="reveal">
-        <span class="section-num" style="display:block;margin-bottom:16px;">INDUSTRIES SERVED</span>
-        <div class="clients">
-          <span class="client">Financial Services</span>
-          <span class="client">Banking</span>
-          <span class="client">Telecom</span>
-          <span class="client">Energy</span>
-          <span class="client">Retail</span>
-          <span class="client">CPG</span>
-          <span class="client">Manufacturing</span>
-        </div>
+      <div class="stackgroup reveal">
+        <span class="microlabel">AI frameworks</span>
+        <div class="chips"><span class="chip">LangChain</span><span class="chip">LangGraph</span><span class="chip">CrewAI</span><span class="chip">Agno</span><span class="chip">LlamaIndex</span><span class="chip">n8n</span></div>
+      </div>
+      <div class="stackgroup reveal">
+        <span class="microlabel">Machine learning, data &amp; apps</span>
+        <div class="chips"><span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Streamlit</span><span class="chip">Gradio</span></div>
+      </div>
+      <div class="stackgroup reveal">
+        <span class="microlabel">Oracle tech</span>
+        <div class="chips"><span class="chip">SQL</span><span class="chip">PL/SQL</span><span class="chip">Oracle REST API</span><span class="chip">Transactional Business Intelligence</span><span class="chip">BI Publisher</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- =================== CERTS =================== -->
+<!-- CAREER -->
+<section id="career">
+  <div class="wrap">
+    <span class="eyebrow sec-eyebrow">Career</span>
+    <div class="sec-head">
+      <h2>24 years, employer by employer</h2>
+      <p class="lead">Described by scope and industry. Client engagements stay confidential.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-fill" id="tlFill"></div>
+      <div class="tl-item reveal">
+        <div class="tl-head"><h3>IBM</h3><span class="yrs">2025 – Present</span></div>
+        <div class="tl-role">Application Architect (Oracle ERP &amp; AI)</div>
+        <p class="tl-note">Oracle ERP Cloud solution architecture and applied-AI delivery for enterprise clients in Food Processing and Financial Services.</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-head"><h3>Accenture</h3><span class="yrs">2022 – 2025</span></div>
+        <div class="tl-role">Business Architect, Oracle ERP</div>
+        <p class="tl-note">Oracle ERP Cloud architecture plus a portfolio of Generative AI and machine learning builds on Fusion data, in Consumer Packaged Goods.</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-head"><h3>Capgemini</h3><span class="yrs">2012 – 2022</span></div>
+        <div class="tl-role">Senior Project Manager / Oracle Cloud Architect</div>
+        <p class="tl-note">Fusion and E-Business Suite delivery and program management across Telecom, Utility, Third-Party Logistics, Financial Services and Oil &amp; Gas, including the Oracle Cloud Solutions Design Center in Houston. Signature programs: an automated revenue-recognition system and a service and extended-warranty solution for an oil and gas major, plus Oracle Financial Services Lending and Leasing, Financial Accounting Hub and Oracle Cloud Infrastructure delivery, with sprint-based transition management for a national telecom.</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-head"><h3>UST</h3><span class="yrs">2008 – 2012</span></div>
+        <div class="tl-role">Enterprise Solution Specialist</div>
+        <p class="tl-note">Oracle E-Business Suite Financials and Supply Chain: a global Release 12 rollout for a retail giant and fireman-grade production support for a manufacturing leader, documented end to end.</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-head"><h3>Monster · Wipro · TCS · iGATE · InfoSoft</h3><span class="yrs">2002 – 2008</span></div>
+        <div class="tl-role">Consultant to Solution Analyst</div>
+        <p class="tl-note">Oracle E-Business Suite Order to Cash and Procure to Pay implementation, support and data conversion across Retail, Financial Services and Talent Management, delivered from the United States, Prague and India.</p>
+      </div>
+    </div>
+    <div class="tl-edu reveal"><b>Education:</b> Bachelor of Computer Science &amp; Engineering · Amravati University (1997 – 2001)</div>
+  </div>
+</section>
+
+<!-- CERTS -->
 <section id="certs">
   <div class="wrap">
+    <span class="eyebrow sec-eyebrow">Credentials</span>
     <div class="sec-head">
-      
       <h2>Credentials that travel</h2>
-      <p class="lead">A curated set of the AI, data and delivery certifications that matter most.</p>
+      <p class="lead">Oracle ACE Pro, plus depth across delivery, ERP implementation, AI and data.</p>
     </div>
-    <div class="certs">
-      <div class="cert reveal"><span class="badge"></span><span>Oracle ACE Associate<small>Oracle</small></span></div>
-      <div class="cert reveal"><span class="badge"></span><span>OCI Generative AI Professional<small>2025</small></span></div>
-      <div class="cert reveal"><span class="badge"></span><span>Oracle AI Vector Search Professional<small>23ai</small></span></div>
-      <div class="cert reveal"><span class="badge"></span><span>OCI Data Science Professional<small>2025</small></span></div>
-      <div class="cert reveal"><span class="badge"></span><span>OCI AI Foundations Associate<small>2025</small></span></div>
-      <div class="cert reveal"><span class="badge"></span><span>Oracle Analytics Cloud Professional<small>OAC · 2025</small></span></div>
-      <div class="cert reveal pm"><span class="badge"></span><span>PMP<small>Project Management Institute</small></span></div>
-      <div class="cert reveal pm"><span class="badge"></span><span>SAFe POPM &amp; PSM<small>Agile</small></span></div>
-      <div class="cert reveal pm"><span class="badge"></span><span>Oracle Financials &amp; PPM Cloud<small>Certified Implementation Professional</small></span></div>
+    <div class="certcols">
+      <div class="certcol reveal">
+        <span class="microlabel">Delivery</span>
+        <div class="cert"><span class="dot"></span><span>Project Management Professional</span></div>
+        <div class="cert"><span class="dot"></span><span>Oracle Cloud Project Management Practitioner</span></div>
+        <div class="cert"><span class="dot"></span><span>SAFe Product Owner / Product Manager</span></div>
+        <div class="cert"><span class="dot"></span><span>Professional Scrum Master</span></div>
+      </div>
+      <div class="certcol reveal">
+        <span class="microlabel">Oracle ERP Implementation</span>
+        <div class="cert"><span class="dot"></span><span>Payables Cloud</span></div>
+        <div class="cert"><span class="dot"></span><span>Receivables Cloud</span></div>
+        <div class="cert"><span class="dot"></span><span>Project Management Cloud</span></div>
+        <div class="cert"><span class="dot"></span><span>Revenue Management Cloud</span></div>
+        <div class="cert"><span class="dot"></span><span>Accounting Hub Cloud</span></div>
+        <div class="cert"><span class="dot"></span><span>Financials Business Process</span></div>
+        <div class="cert"><span class="dot"></span><span>ERP Foundations</span></div>
+      </div>
+      <div class="certcol reveal">
+        <span class="microlabel">Oracle AI &amp; Data</span>
+        <div class="cert"><span class="dot"></span><span>Oracle Cloud Infrastructure Generative AI Professional</span></div>
+        <div class="cert"><span class="dot"></span><span>Oracle AI Vector Search (23ai)</span></div>
+        <div class="cert"><span class="dot"></span><span>Oracle Cloud Infrastructure Data Science Professional</span></div>
+        <div class="cert"><span class="dot"></span><span>Oracle Cloud Infrastructure AI Foundations</span></div>
+        <div class="cert"><span class="dot"></span><span>Oracle Analytics Cloud</span></div>
+        <div class="cert"><span class="dot"></span><span>Oracle Machine Learning</span></div>
+        <div class="cert"><span class="dot"></span><span>Oracle AI Agent Studio, Releases 1 &amp; 2</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- =================== CHANNELS =================== -->
+<!-- CHANNELS -->
 <section id="channels">
   <div class="wrap">
+    <span class="eyebrow sec-eyebrow">Teaching</span>
     <div class="sec-head">
-      
-      <h2>Where I teach in public</h2>
-      <p class="lead">Two channels, two audiences. Pick your lane.</p>
+      <h2>Teaching, 490+ lessons deep</h2>
+      <p class="lead">Two channels: full Oracle Fusion courses on one, agentic AI engineering on the other.</p>
     </div>
     <div class="channels">
-      <div class="channel reveal">
+      <div class="card-i channel reveal">
         <span class="yt">YouTube</span>
         <h3>May The Oracle Be With You</h3>
         <span class="handle">@KumR</span>
-        <p>Oracle ERP meets AI: walkthroughs, implementation lessons, and the practical side of Fusion Cloud.</p>
+        <p>Full Oracle Fusion courses, module by module: Financials, Projects, Revenue, Subledger Accounting, Supply Chain, and AI on Oracle.</p>
         <div class="sub"><a class="btn btn-ghost" href="https://www.youtube.com/@KumR" target="_blank" rel="noopener">Subscribe →</a></div>
       </div>
-      <div class="channel reveal">
+      <div class="card-i channel reveal">
         <span class="yt">YouTube</span>
         <h3>The Context Engineer</h3>
         <span class="handle">@TheContextEngineer</span>
-        <p>The AI side: agents, RAG, context engineering and the tooling behind building things that actually ship.</p>
+        <p>The AI side: agents, retrieval-augmented generation, context engineering and the tooling behind building things that actually ship.</p>
         <div class="sub"><a class="btn btn-ghost" href="https://www.youtube.com/@TheContextEngineer" target="_blank" rel="noopener">Subscribe →</a></div>
       </div>
+    </div>
+
+    <span class="microlabel" style="display:block;margin:44px 0 14px;">Course library · May The Oracle Be With You</span>
+    <div class="courses">
+      <a class="course reveal" href="https://www.youtube.com/playlist?list=PLCiLnvtXMbwBovLGTcBcPSUWQrNCc_szI" target="_blank" rel="noopener"><span class="ct">Projects Accounting</span><span class="cn">68 lessons</span></a>
+      <a class="course reveal" href="https://www.youtube.com/playlist?list=PLCiLnvtXMbwBJfgCrTP8jm7jdZ4RSqxd-" target="_blank" rel="noopener"><span class="ct">The AI-Powered Oracle</span><span class="cn">71 videos</span></a>
+      <a class="course reveal" href="https://www.youtube.com/playlist?list=PLCiLnvtXMbwBmDVsoC4b6QT-8kCpXKpNs" target="_blank" rel="noopener"><span class="ct">Cloud Questions, Answered</span><span class="cn">62 videos</span></a>
+      <a class="course reveal" href="https://www.youtube.com/playlist?list=PLCiLnvtXMbwAIG6ivxw5jm5ugsUg5ZwHS" target="_blank" rel="noopener"><span class="ct">Revenue Management</span><span class="cn">38 lessons</span></a>
+      <a class="course reveal" href="https://www.youtube.com/playlist?list=PLCiLnvtXMbwB6YKonvhBucRwHEuIOyWP5" target="_blank" rel="noopener"><span class="ct">Subledger Accounting</span><span class="cn">37 lessons</span></a>
+      <a class="course reveal" href="https://www.youtube.com/playlist?list=PLCiLnvtXMbwCddsiDckIi_juWb5z-OD-l" target="_blank" rel="noopener"><span class="ct">Customer Management</span><span class="cn">35 videos</span></a>
+      <a class="course reveal" href="https://www.youtube.com/playlist?list=PLCiLnvtXMbwADg8HG3uXVgcoxOWapvT45" target="_blank" rel="noopener"><span class="ct">Channel Revenue Management</span><span class="cn">33 lessons</span></a>
+      <a class="course reveal" href="https://www.youtube.com/playlist?list=PLCiLnvtXMbwBYtxWsg-iLMhuDseWTVqoQ" target="_blank" rel="noopener"><span class="ct">Supply Chain &amp; Costing</span><span class="cn">30 lessons</span></a>
+      <a class="course reveal" href="https://www.youtube.com/playlist?list=PLCiLnvtXMbwDhbow4Pos1JCrOHvrGzXbr" target="_blank" rel="noopener"><span class="ct">The Oracle AI Agent</span><span class="cn">28 lessons</span></a>
+      <a class="course reveal" href="https://www.youtube.com/playlist?list=PLCiLnvtXMbwBYD3Gru-shwmk6H0mBA141" target="_blank" rel="noopener"><span class="ct">Credit Card &amp; Expenses</span><span class="cn">25 lessons</span></a>
+      <a class="course reveal" href="https://www.youtube.com/playlist?list=PLCiLnvtXMbwCiXMbE2DJtG_vCxNoaPIky" target="_blank" rel="noopener"><span class="ct">The Channel &amp; I</span><span class="cn">50 videos</span></a>
+      <a class="course reveal" href="https://www.youtube.com/playlist?list=PLCiLnvtXMbwDplFKhFEPB2MvvH3jpbL1D" target="_blank" rel="noopener"><span class="ct">Collections</span><span class="cn">12 lessons</span></a>
+      <a class="course reveal" href="https://www.youtube.com/playlist?list=PLCiLnvtXMbwAdNA4SagjLG5EajRb2nlbp" target="_blank" rel="noopener"><span class="ct">Intercompany</span><span class="cn">new series</span></a>
     </div>
   </div>
 </section>
 
-<!-- =================== CONTACT =================== -->
+<!-- CONTACT -->
 <section id="contact">
+  <canvas class="neuro" id="neuroContact" aria-hidden="true"></canvas>
   <div class="wrap">
     <span class="eyebrow" style="justify-content:center;">Let's talk</span>
-    <h2>Have an idea for <em>AI</em> in your Oracle stack?</h2>
+    <h2>Have an ERP program or an <em>AI</em> build in mind?</h2>
     <p class="lede">Tell me what you're trying to build. The fastest path is a short discovery call. No form, no funnel.</p>
     <div class="contact-ctas">
-      <!-- TODO: swap mailto for your Calendly link when ready -->
-      <a class="btn btn-primary" href="mailto:shiv.arun.iyer@gmail.com?subject=Discovery%20call%20%E2%80%94%20AI%20solutions">Book a discovery call →</a>
-      <a class="btn btn-ghost" href="mailto:shiv.arun.iyer@gmail.com?subject=Oracle%20ERP%20engagement">Talk Oracle ERP</a>
+      <a class="btn btn-primary" href="mailto:shiv.arun.iyer@gmail.com?subject=Discovery%20call">Book a discovery call →</a>
+      <a class="btn btn-ghost" href="mailto:shiv.arun.iyer@gmail.com">Email me directly</a>
     </div>
     <div class="socials">
       <a class="social" href="https://www.linkedin.com/in/kumr192" target="_blank" rel="noopener">LinkedIn</a>
@@ -531,6 +719,8 @@
   </div>
 </section>
 
+</main>
+
 <footer>
   <div class="wrap foot-inner">
     <span>© <span id="yr"></span> Shivkumar Iyer · Houston, TX</span>
@@ -539,18 +729,35 @@
 </footer>
 
 <script>
-  // year
   document.getElementById('yr').textContent = new Date().getFullYear();
 
-  // nav scrolled state
   const nav = document.getElementById('nav');
   addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 10));
 
-  // mobile menu
   const toggle = document.getElementById('navToggle');
   const links = document.getElementById('navlinks');
   toggle.addEventListener('click', () => links.classList.toggle('open'));
   links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+  // progress bar
+  const prog = document.getElementById('progress');
+  addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const p = h.scrollTop / (h.scrollHeight - h.clientHeight);
+    prog.style.width = (p * 100) + '%';
+  }, { passive: true });
+
+  // scrollspy
+  const navAnchors = Array.from(links.querySelectorAll('a:not(.btn)'));
+  const spyTargets = navAnchors.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const spy = new IntersectionObserver((es) => {
+    es.forEach(e => {
+      if (e.isIntersecting) {
+        navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  spyTargets.forEach(t => spy.observe(t));
 
   // hero reveals on load
   addEventListener('load', () => {
@@ -568,47 +775,235 @@
   }, { threshold: .14 });
   document.querySelectorAll('section .reveal').forEach(el => io.observe(el));
 
-  // count-up stats on first view
-  const countObs = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(!e.isIntersecting) return;
-      const el=e.target, to=+el.dataset.to, dur=1100, t0=performance.now();
-      const tick=(now)=>{
-        const p=Math.min((now-t0)/dur,1);
-        const eased=1-Math.pow(1-p,3);
-        el.textContent=Math.round(to*eased);
-        if(p<1) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-      countObs.unobserve(el);
-    });
-  },{threshold:.6});
-  document.querySelectorAll('.count').forEach(el=>countObs.observe(el));
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // interactive: hero cursor spotlight (desktop pointers only)
-  const fine = matchMedia('(pointer:fine)').matches;
-  if(fine){
-    const hdr=document.querySelector('header');
-    hdr.addEventListener('pointermove',e=>{
-      const r=hdr.getBoundingClientRect();
-      hdr.style.setProperty('--hx',(e.clientX-r.left)+'px');
-      hdr.style.setProperty('--hy',(e.clientY-r.top)+'px');
-    });
-
-    // interactive: spotlight + subtle tilt on cards
-    const cards=document.querySelectorAll('.proj,.track,.channel');
-    cards.forEach(card=>{
-      card.addEventListener('pointermove',e=>{
-        const r=card.getBoundingClientRect();
-        const x=e.clientX-r.left, y=e.clientY-r.top;
-        card.style.setProperty('--mx',x+'px');
-        card.style.setProperty('--my',y+'px');
-        const rx=((y/r.height)-.5)*-5, ry=((x/r.width)-.5)*5;
-        card.style.transform=`perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-3px)`;
+  // count-up (markup already holds real values; animate only if motion is ok)
+  if (!reduced) {
+    const countObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el = e.target, to = +el.dataset.to, dur = 1100, t0 = performance.now();
+        const tick = (now) => {
+          const p = Math.min((now - t0) / dur, 1);
+          el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3)));
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+        countObs.unobserve(el);
       });
-      card.addEventListener('pointerleave',()=>{ card.style.transform=''; });
+    }, { threshold: .6 });
+    document.querySelectorAll('.count').forEach(el => countObs.observe(el));
+  }
+
+  // pointer interactions (fine pointers only)
+  if (matchMedia('(pointer:fine)').matches && !reduced) {
+    const hdr = document.querySelector('header');
+    hdr.addEventListener('pointermove', e => {
+      const r = hdr.getBoundingClientRect();
+      hdr.style.setProperty('--hx', (e.clientX - r.left) + 'px');
+      hdr.style.setProperty('--hy', (e.clientY - r.top) + 'px');
+    });
+    document.querySelectorAll('.card-i,.proj').forEach(card => {
+      card.addEventListener('pointermove', e => {
+        const r = card.getBoundingClientRect();
+        const x = e.clientX - r.left, y = e.clientY - r.top;
+        card.style.setProperty('--mx', x + 'px');
+        card.style.setProperty('--my', y + 'px');
+        const rx = ((y / r.height) - .5) * -5, ry = ((x / r.width) - .5) * 5;
+        card.style.transform = 'perspective(900px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) translateY(-3px)';
+      });
+      card.addEventListener('pointerleave', () => { card.style.transform = ''; });
     });
   }
+
+  // ---- Neural constellation: true 3D points, perspective-projected ----
+  function neural3D(canvas, opts) {
+    if (!canvas || reduced) return;
+    const ctx = canvas.getContext('2d');
+    const N = opts.count, F = 420, LINK = opts.link;
+    const DPR = Math.min(devicePixelRatio || 1, 2);
+    let w, h, cx, cy, running = false, raf = 0;
+    let rotY = 0, tX = 0, tY = 0, curX = 0, curY = 0;
+    const pulses = [];
+
+    const pts = Array.from({length: N}, () => ({
+      x: (Math.random() - .5) * 900,
+      y: (Math.random() - .5) * 520,
+      z: (Math.random() - .5) * 700,
+      vx: (Math.random() - .5) * .22,
+      vy: (Math.random() - .5) * .22,
+      vz: (Math.random() - .5) * .22,
+    }));
+
+    function size() {
+      const r = canvas.parentElement.getBoundingClientRect();
+      w = r.width; h = r.height; cx = w / 2; cy = h / 2;
+      canvas.width = w * DPR; canvas.height = h * DPR;
+      canvas.style.width = w + 'px'; canvas.style.height = h + 'px';
+      ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    }
+    size(); addEventListener('resize', size);
+
+    if (matchMedia('(pointer:fine)').matches) {
+      canvas.parentElement.addEventListener('pointermove', e => {
+        const r = canvas.getBoundingClientRect();
+        tY = ((e.clientX - r.left) / r.width - .5) * .5;
+        tX = ((e.clientY - r.top) / r.height - .5) * .3;
+      });
+    }
+
+    function frame() {
+      if (!running) return;
+      ctx.clearRect(0, 0, w, h);
+      rotY += .0016;
+      curY += (tY - curY) * .04;
+      curX += (tX - curX) * .04;
+      const sy = Math.sin(rotY + curY), cyw = Math.cos(rotY + curY);
+      const sx = Math.sin(curX), cxw = Math.cos(curX);
+      const proj = [];
+
+      for (const p of pts) {
+        p.x += p.vx; p.y += p.vy; p.z += p.vz;
+        if (p.x > 460 || p.x < -460) p.vx *= -1;
+        if (p.y > 270 || p.y < -270) p.vy *= -1;
+        if (p.z > 360 || p.z < -360) p.vz *= -1;
+        let x = p.x * cyw - p.z * sy, z1 = p.x * sy + p.z * cyw;
+        let y = p.y * cxw - z1 * sx,  z = p.y * sx + z1 * cxw;
+        const sc = F / (F + z + 480);
+        proj.push({ sx: cx + x * sc, sy: cy + y * sc, sc });
+      }
+
+      ctx.lineWidth = 1;
+      const near = [];
+      for (let i = 0; i < N; i++) {
+        for (let j = i + 1; j < N; j++) {
+          const a = proj[i], b = proj[j];
+          const dx = a.sx - b.sx, dy = a.sy - b.sy;
+          const d2 = dx * dx + dy * dy;
+          if (d2 < LINK * LINK) {
+            const al = (1 - Math.sqrt(d2) / LINK) * .28 * Math.min(a.sc, b.sc);
+            ctx.strokeStyle = 'rgba(45,212,191,' + al.toFixed(3) + ')';
+            ctx.beginPath(); ctx.moveTo(a.sx, a.sy); ctx.lineTo(b.sx, b.sy); ctx.stroke();
+            near.push([i, j]);
+          }
+        }
+      }
+      for (const q of proj) {
+        const r = 1.1 * q.sc + .4, al = .18 + q.sc * .55;
+        ctx.fillStyle = 'rgba(94,234,212,' + al.toFixed(3) + ')';
+        ctx.beginPath(); ctx.arc(q.sx, q.sy, r, 0, 6.2832); ctx.fill();
+      }
+      // signal pulses travelling along links
+      if (near.length && pulses.length < 6 && Math.random() < .03) {
+        const pick = near[(Math.random() * near.length) | 0];
+        pulses.push({ i: pick[0], j: pick[1], t: 0, sp: .007 + Math.random() * .012 });
+      }
+      for (let k = pulses.length - 1; k >= 0; k--) {
+        const pl = pulses[k]; pl.t += pl.sp;
+        const a = proj[pl.i], b = proj[pl.j];
+        if (pl.t >= 1 || !a || !b) { pulses.splice(k, 1); continue; }
+        const px = a.sx + (b.sx - a.sx) * pl.t, py = a.sy + (b.sy - a.sy) * pl.t;
+        const sc = (a.sc + b.sc) / 2;
+        ctx.fillStyle = 'rgba(94,234,212,.14)';
+        ctx.beginPath(); ctx.arc(px, py, 6 * sc + 2, 0, 6.2832); ctx.fill();
+        ctx.fillStyle = 'rgba(230,255,250,.9)';
+        ctx.beginPath(); ctx.arc(px, py, 1.6 * sc + .6, 0, 6.2832); ctx.fill();
+      }
+      raf = requestAnimationFrame(frame);
+    }
+
+    let inView = false;
+    const update = () => {
+      const should = inView && !document.hidden;
+      if (should && !running) { running = true; cancelAnimationFrame(raf); frame(); }
+      else if (!should) { running = false; }
+    };
+    const vis = new IntersectionObserver(es => es.forEach(e => { inView = e.isIntersecting; update(); }), { threshold: .05 });
+    vis.observe(canvas.parentElement);
+    document.addEventListener('visibilitychange', update);
+  }
+  neural3D(document.getElementById('neuroHero'), { count: 130, link: 130 });
+  neural3D(document.getElementById('neuroContact'), { count: 80, link: 120 });
+
+  // portrait 3D tilt + magnetic primary buttons (fine pointers, motion ok)
+  if (matchMedia('(pointer:fine)').matches && !reduced) {
+    const por = document.querySelector('.portrait');
+    if (por) {
+      por.addEventListener('pointermove', e => {
+        const r = por.getBoundingClientRect();
+        const rx = ((e.clientY - r.top) / r.height - .5) * -7;
+        const ry = ((e.clientX - r.left) / r.width - .5) * 7;
+        por.style.transform = 'perspective(900px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg)';
+      });
+      por.addEventListener('pointerleave', () => { por.style.transform = ''; });
+      por.style.transition = 'transform .25s cubic-bezier(.2,.7,.2,1)';
+    }
+    document.querySelectorAll('.btn-primary').forEach(b => {
+      b.addEventListener('pointermove', e => {
+        const r = b.getBoundingClientRect();
+        const mx = (e.clientX - r.left - r.width / 2) * .12;
+        const my = (e.clientY - r.top - r.height / 2) * .3;
+        b.style.transform = 'translate(' + mx + 'px,' + (my - 2) + 'px)';
+      });
+      b.addEventListener('pointerleave', () => { b.style.transform = ''; });
+    });
+  }
+
+  // headline word stagger
+  (function(){
+    const h1 = document.querySelector('.hero h1'); if (!h1) return;
+    if (reduced) { h1.classList.add('go'); return; }
+    let wi = 0;
+    const wrap = (node) => {
+      [...node.childNodes].forEach(n => {
+        if (n.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach(tk => {
+            if (!tk) return;
+            if (/^\s+$/.test(tk)) { frag.appendChild(document.createTextNode(tk)); return; }
+            const sp = document.createElement('span');
+            sp.className = 'w'; sp.style.setProperty('--wd', (wi++ * 38) + 'ms');
+            sp.textContent = tk; frag.appendChild(sp);
+          });
+          node.replaceChild(frag, n);
+        } else if (n.nodeType === 1 && n.tagName !== 'BR') {
+          if (n.tagName === 'EM') { n.classList.add('w'); n.style.setProperty('--wd', (wi++ * 38) + 'ms'); }
+          else wrap(n);
+        }
+      });
+    };
+    wrap(h1);
+    addEventListener('load', () => h1.classList.add('go'));
+  })();
+
+  // hero grid parallax
+  if (!reduced) {
+    const grid = document.querySelector('.hero-grid-bg');
+    let pend = false;
+    addEventListener('scroll', () => {
+      if (pend) return; pend = true;
+      requestAnimationFrame(() => {
+        const y = Math.min(scrollY, 900);
+        if (grid) grid.style.transform = 'translateY(' + (y * .12) + 'px)';
+        pend = false;
+      });
+    }, { passive: true });
+  }
+
+  // timeline draws itself
+  (function(){
+    const tl = document.querySelector('.timeline'), tf = document.getElementById('tlFill');
+    if (!tl || !tf) return;
+    const items = [...tl.querySelectorAll('.tl-item')];
+    if (reduced) { tf.style.height = 'calc(100% - 12px)'; items.forEach(i => i.classList.add('lit')); return; }
+    const onS = () => {
+      const r = tl.getBoundingClientRect(), vh = innerHeight;
+      const prog = Math.min(Math.max((vh * .65 - r.top) / r.height, 0), 1);
+      tf.style.height = (prog * (r.height - 12)) + 'px';
+      items.forEach(it => it.classList.toggle('lit', it.getBoundingClientRect().top < vh * .65));
+    };
+    addEventListener('scroll', onS, { passive: true }); onS();
+  })();
 </script>
 </body>
 </html>
